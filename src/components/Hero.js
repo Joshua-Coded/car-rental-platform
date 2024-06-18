@@ -2,9 +2,9 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import backgroundImage from '../images/logo.jpeg';
-import slide1 from '../images/coach1.jpeg';
-import slide2 from '../images/coach2.jpeg';
-import slide3 from '../images/coach3.jpeg';
+import slide1 from '../images/car1.jpg';
+import slide2 from '../images/car4.jpg';
+import slide3 from '../images/car5.jpg';
 
 const Hero = () => {
     return (
