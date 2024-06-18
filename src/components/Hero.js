@@ -45,7 +45,7 @@ const Hero = () => {
                         <div className="flex items-center space-x-4">
                             <label className="block w-full">
                                 <span className="text-white">Journey Required</span>
-                                <select className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <select className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                     <option>One Way</option>
                                     <option>Return</option>
                                 </select>
@@ -54,19 +54,19 @@ const Hero = () => {
                         <div className="flex flex-col space-y-2">
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Date</span>
-                                <input type="date" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input type="date" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Time</span>
-                                <input type="time" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input type="time" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Address and Postcode</span>
-                                <input type="text" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input type="text" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Drop Off Address</span>
-                                <input type="text" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input type="text" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                             </label>
                         </div>
                         <button className="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
