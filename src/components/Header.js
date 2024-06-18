@@ -52,7 +52,7 @@ const Header = () => {
                 <button className="bg-red-600 px-6 py-3 rounded hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
             </div>
             {isOpen && (
-                <div className="fixed inset-0 bg-blue-900 text-white flex flex-col items-center justify-center z-50">
+                <div className="fixed inset-0 bg-gray-900 text-white flex flex-col items-center justify-center z-50">
                     <button
                         className="absolute top-4 right-4 focus:outline-none cursor-pointer"
                         onClick={toggleMenu}
@@ -69,7 +69,7 @@ const Header = () => {
                         <a href="#featured" className="hover:text-gray-300 cursor-pointer">Featured</a>
                     </nav>
                     <div className="mt-6">
-                        <button className="bg-gray-900 px-6 py-3 rounded hover:bg-red-700 text-lg flex items-center mb-4 cursor-pointer">
+                        <button className="bg-gray-800 px-6 py-3 rounded hover:bg-red-700 text-lg flex items-center mb-4 cursor-pointer">
                             <FontAwesomeIcon icon={faWhatsapp} className="mr-2" /> Enquire
                         </button>
                     </div>
