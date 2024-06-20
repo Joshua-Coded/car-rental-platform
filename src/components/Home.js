@@ -5,7 +5,8 @@ import Hero from './Hero';
 import CarouselComponent from './CarouselComponent';
 import WhatWeDo from './WhatWeDo';
 import WhatYouCanExpect from './WhatYouCanExpect';
-import ComplexComponent from './ComplexComponent';
+import NewDesignComponent from './NewDesignComponent';
+import Gallery from './Gallery';
 
 const Home = () => {
     return (
@@ -15,7 +16,8 @@ const Home = () => {
             <CarouselComponent />
             <WhatWeDo />
             <WhatYouCanExpect />
-            <ComplexComponent />
+            <NewDesignComponent />
+            <Gallery />
         </div>
     );
 };

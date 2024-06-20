@@ -8,7 +8,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -22,19 +22,12 @@ a {
     text-decoration: none;
 }
 
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 h1,
 h2,
 p {
     color: white;
 }
 
-/* Ensure buttons are styled correctly */
 button {
     cursor: pointer;
 }
