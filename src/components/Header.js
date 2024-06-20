@@ -29,7 +29,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`sticky top-0 flex justify-between items-center p-6 ${scrolled ? 'bg-gray-900 text-white' : 'bg-white text-black'} z-50 h-20 transition-colors duration-300`}>
+        <header className={`sticky top-0 flex justify-between items-center p-6 ${scrolled ? 'bg-gray-900 text-white' : 'bg-black text-black'} z-50 h-20 transition-colors duration-300`}>
             <div className="flex items-center space-x-4">
                 <button
                     className="block md:hidden focus:outline-none"
@@ -40,9 +40,9 @@ const Header = () => {
                     </svg>
                 </button>
                 <div className="hidden md:flex md:space-x-8 text-lg">
-                    <a href="#business" className="hover:text-gray-300 cursor-pointer">Business</a>
-                    <a href="#weddings" className="hover:text-gray-300 cursor-pointer">Weddings</a>
-                    <a href="#services" className="hover:text-gray-300 cursor-pointer">Services</a>
+                    <a href="#business" className="text-white hover:text-gray-300 cursor-pointer">Business</a>
+                    <a href="#weddings" className="text-white hover:text-gray-300 cursor-pointer">Weddings</a>
+                    <a href="#services" className="text-white hover:text-gray-300 cursor-pointer">Services</a>
                 </div>
             </div>
             <div className="flex-shrink-0 mx-4">

@@ -1,22 +1,24 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import backgroundImage from '../images/logo.jpeg';
-import slide1 from '../images/car1.jpg';
-import slide2 from '../images/car4.jpg';
-import slide3 from '../images/car5.jpg';
+import homeImage from '../images/slide2.jpeg';
+import slide1 from '../images/slide1.jpeg';
+import slide2 from '../images/slide2.jpeg';
+import slide3 from '../images/slide3.jpeg';
 
 const Hero = () => {
     return (
         <div
             className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
+            style={{ backgroundImage: `url(${homeImage})` }}
         >
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12">
                 <div className="max-w-lg space-y-6 text-center md:text-left">
-                    <h1 className="text-2xl md:text-5xl font-semibold">Welcome to Luxury Travel</h1>
-                    <p className="text-md md:text-lg">Experience luxury travel from £195</p>
+                    <h1 className="text-2xl md:text-5xl font-semibold">Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.
+                    </h1>
+                    <p className="text-md md:text-lg">We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience.
+                        Connect | Book | Enquire</p>
                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                         <button className="bg-red-600 px-4 py-2 rounded hover:bg-red-700">View Services</button>
                         <button className="bg-gray-900 px-4 py-2 rounded hover:bg-gray-900">Watch Video</button>
