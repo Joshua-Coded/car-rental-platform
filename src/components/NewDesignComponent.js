@@ -17,10 +17,10 @@ const NewDesignComponent = () => {
         <div className="bg-black text-white py-10 px-6 flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12">
             <div className="flex-1 md:w-2/3 bg-gray-900 p-6 rounded-lg">
                 <div className="mb-8">
-                    <video className="w-full h-64 md:h-80 rounded-lg mb-6" controls>
+                    {/* <video className="w-full h-64 md:h-80 rounded-lg mb-6" controls>
                         <source src={localVideo} type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
+                    </video> */}
                     <h1 className="text-3xl font-bold mb-4">Car Interior Features</h1>
                     <p className="text-lg mb-4">Discover the exceptional features of our luxury car interiors designed to provide the utmost comfort and convenience during your journey.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">

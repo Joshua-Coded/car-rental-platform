@@ -7,6 +7,7 @@ import WhatWeDo from './WhatWeDo';
 import WhatYouCanExpect from './WhatYouCanExpect';
 import NewDesignComponent from './NewDesignComponent';
 import Gallery from './Gallery';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <WhatYouCanExpect />
             <NewDesignComponent />
             <Gallery />
+            <Footer />
         </div>
     );
 };

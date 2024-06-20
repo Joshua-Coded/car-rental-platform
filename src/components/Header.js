@@ -46,10 +46,10 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex-shrink-0 mx-4">
-                <img src={logo} alt="Company Logo" className="h-16 rounded-full" />
+                <img src={logo} alt="Company Logo" className="h-12" />
             </div>
             <div className="hidden md:block text-right">
-                <button className="bg-red-600 px-6 py-3 rounded hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
+                <button className="bg-red-600 px-8 py-3 rounded-full hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 bg-gray-900 text-white flex flex-col items-center justify-center z-50">

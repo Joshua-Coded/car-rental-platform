@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import slide1 from '../images/slide1.jpeg';
 import slide2 from '../images/slide2.jpeg';
 import slide3 from '../images/slide3.jpeg';
-import slide4 from '../images/slide4.jpeg';
-import slide5 from '../images/slide5.jpeg';
 
 const Gallery = () => {
     const images = [
-        { id: 1, src: slide1, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        { id: 2, src: slide2, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        { id: 3, src: slide3, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        { id: 3, src: slide4, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        { id: 3, src: slide5, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        { id: 3, src: slide1, alt: 'We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology' },
-        // Add more images as needed
+        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 2, src: slide2, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 3, src: slide3, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 2, src: slide2, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 3, src: slide3, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
     ];
 
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -31,7 +28,7 @@ const Gallery = () => {
 
     return (
         <div className="bg-black text-white py-10 px-6">
-            <h1 className="text-4xl font-bold mb-6 text-center">Gallery</h1>
+            <h1 className="text-4xl font-bold mb-6 text-center">Our Gallery</h1>
             <p className="text-center text-lg mb-8">
                 Take a look at our collection of luxurious travel experiences. Each image captures the essence of comfort and elegance.
             </p>
@@ -39,12 +36,13 @@ const Gallery = () => {
                 {images.map((image) => (
                     <div
                         key={image.id}
-                        className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+                        className="relative overflow-hidden rounded-lg cursor-pointer"
                         onClick={() => openLightbox(image)}
                     >
                         <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <p className="text-lg text-white">{image.alt}</p>
+                        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <p className="text-lg text-white mb-2">{image.alt}</p>
+                            <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Click Me</button>
                         </div>
                     </div>
                 ))}
@@ -59,7 +57,7 @@ const Gallery = () => {
                         >
                             &times;
                         </button>
-                        <img src={currentImage.src} alt={currentImage.alt} className="max-w-full max-h-full" />
+                        <img src={currentImage.src} alt={currentImage.alt} className="max-w-full max-h-96" />
                         <p className="text-center text-lg text-white mt-4">{currentImage.alt}</p>
                     </div>
                 </div>
