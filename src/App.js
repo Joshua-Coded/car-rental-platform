@@ -1,12 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
+import Business from './pages/Business';
+import Services from './pages/Services';
+import Weddings from './pages/Weddings';
+import Header from './components/Header';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/weddings" element={<Weddings />} />
+      </Routes>
+    </Router>
   );
 }
 

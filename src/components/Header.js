@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faPhoneAlt } from '@fortawesome/free-brands-svg-icons';
-import { faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import logo from '../images/logo.jpeg';
 
 const Header = () => {
@@ -40,16 +41,16 @@ const Header = () => {
                     </svg>
                 </button>
                 <div className="hidden md:flex md:space-x-8 text-lg">
-                    <a href="#business" className="text-white hover:text-gray-300 cursor-pointer">Business</a>
-                    <a href="#weddings" className="text-white hover:text-gray-300 cursor-pointer">Weddings</a>
-                    <a href="#services" className="text-white hover:text-gray-300 cursor-pointer">Services</a>
+                    <Link to="/" className="text-white hover:text-gray-300 cursor-pointer">Business</Link>
+                    <Link to="/weddings" className="text-white hover:text-gray-300 cursor-pointer">Weddings</Link>
+                    <Link to="/services" className="text-white hover:text-gray-300 cursor-pointer">Services</Link>
                 </div>
             </div>
             <div className="flex-shrink-0 mx-4">
                 <img src={logo} alt="Company Logo" className="h-12" />
             </div>
             <div className="hidden md:block text-right">
-                <button className="bg-red-600 px-8 py-3 rounded-full hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
+                <button className="bg-red-600 px-6 py-3 rounded-full w-50 h-50 hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 bg-gray-900 text-white flex flex-col items-center justify-center z-50">
@@ -60,10 +61,10 @@ const Header = () => {
                         <FontAwesomeIcon icon={faTimes} className="w-6 h-6 text-white" />
                     </button>
                     <nav className="flex flex-col space-y-6 text-center text-2xl">
-                        <a href="#our-services" className="hover:text-gray-300 cursor-pointer">Our Services</a>
-                        <a href="#business" className="hover:text-gray-300 cursor-pointer">Business</a>
+                        <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
+                        <Link to="/business" className="hover:text-gray-300 cursor-pointer">Business</Link>
                         <a href="#gallery" className="hover:text-gray-300 cursor-pointer">Gallery</a>
-                        <a href="#weddings" className="hover:text-gray-300 cursor-pointer">Weddings</a>
+                        <a href="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</a>
                         <a href="#aviation" className="hover:text-gray-300 cursor-pointer">Aviation</a>
                         <a href="#book-now" className="hover:text-gray-300 cursor-pointer">Book Now</a>
                         <a href="#featured" className="hover:text-gray-300 cursor-pointer">Featured</a>
