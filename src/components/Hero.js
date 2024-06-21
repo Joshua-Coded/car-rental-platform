@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { FaPlay } from 'react-icons/fa';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeImage from '../images/logo1.png';
+import homeImage from '../images/logo.png';
 import slide1 from '../images/slide1.jpeg';
-import slide2 from '../images/slide2.jpeg';
 import slide3 from '../images/slide3.jpeg';
 import localVideo from '../images/video3.mp4';
 
@@ -68,11 +67,11 @@ const Hero = () => {
                             <p className="legend">Luxury Coach 1</p>
                         </div>
                         <div>
-                            <img src={slide2} alt="Slide 2" />
+                            <img src={slide1} alt="Slide 2" />
                             <p className="legend">Luxury Coach 2</p>
                         </div>
                         <div>
-                            <img src={slide3} alt="Slide 3" />
+                            <img src={slide1} alt="Slide 3" />
                             <p className="legend">Luxury Coach 3</p>
                         </div>
                     </Carousel>

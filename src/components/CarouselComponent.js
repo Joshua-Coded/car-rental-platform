@@ -60,7 +60,7 @@ const CarouselComponent = () => {
                             <p className="legend">Luxury Coach 1</p>
                         </div>
                         <div className="h-60 md:h-80">
-                            <img src={slide2} alt="Luxury Coach 2" className="object-cover h-full w-full" />
+                            <img src={slide1} alt="Luxury Coach 2" className="object-cover h-full w-full" />
                             <p className="legend">Luxury Coach 2</p>
                         </div>
                         <div className="h-60 md:h-80">
