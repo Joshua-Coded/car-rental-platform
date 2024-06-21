@@ -5,12 +5,12 @@ import slide3 from '../images/slide3.jpeg';
 
 const Gallery = () => {
     const images = [
-        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 2, src: slide2, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 3, src: slide3, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 2, src: slide2, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 3, src: slide3, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.  Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK. ' },
+        { id: 2, src: slide2, alt: 'We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience.' },
+        { id: 3, src: slide3, alt: 'Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
+        { id: 1, src: slide1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
+        { id: 2, src: slide2, alt: 'We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience.' },
+        { id: 3, src: slide3, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
     ];
 
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -36,7 +36,7 @@ const Gallery = () => {
                 {images.map((image) => (
                     <div
                         key={image.id}
-                        className="relative overflow-hidden rounded-lg cursor-pointer"
+                        className="text-center relative overflow-hidden rounded-lg cursor-pointer"
                         onClick={() => openLightbox(image)}
                     >
                         <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
