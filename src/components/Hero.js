@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { FaPlay } from 'react-icons/fa';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeImage from '../images/slide2.jpeg';
+import homeImage from '../images/logo1.png';
 import slide1 from '../images/slide1.jpeg';
 import slide2 from '../images/slide2.jpeg';
 import slide3 from '../images/slide3.jpeg';
@@ -10,6 +10,14 @@ import localVideo from '../images/video3.mp4';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        fullName: '',
+        journeyRequired: 'One Way',
+        pickUpDate: '',
+        pickUpTime: '',
+        pickUpAddress: '',
+        dropOffAddress: ''
+    });
 
     const openModal = () => {
         setIsModalOpen(true);
@@ -17,6 +25,23 @@ const Hero = () => {
 
     const closeModal = () => {
         setIsModalOpen(false);
+    };
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const message = `Booking Details:
+        - Full Name: ${formData.fullName}
+        - Journey Required: ${formData.journeyRequired}
+        - Pick Up Date: ${formData.pickUpDate}
+        - Pick Up Time: ${formData.pickUpTime}
+        - Pick Up Address: ${formData.pickUpAddress}
+        - Drop Off Address: ${formData.dropOffAddress}`;
+        const whatsappUrl = `https://wa.me/+2347064989611?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
     };
 
     return (
@@ -55,35 +80,72 @@ const Hero = () => {
                 <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg w-full max-w-md space-y-4 md:ml-12 mt-8 md:mt-0">
                     <h1 className="text-2xl font-bold mb-4 text-center">Enquire Now</h1>
                     <p className="mb-4 text-center">Experience luxury travel from £195.</p>
-                    <form className="space-y-4">
-                        <div className="flex items-center space-x-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
+                        <div className="flex flex-col space-y-2">
+                            <label className="block w-full">
+                                <span className="text-white">Full Name</span>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
+                            </label>
                             <label className="block w-full">
                                 <span className="text-white">Journey Required</span>
-                                <select className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <select
+                                    name="journeyRequired"
+                                    value={formData.journeyRequired}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                >
                                     <option>One Way</option>
                                     <option>Return</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className="flex flex-col space-y-2">
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Date</span>
-                                <input type="date" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input
+                                    type="date"
+                                    name="pickUpDate"
+                                    value={formData.pickUpDate}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Time</span>
-                                <input type="time" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input
+                                    type="time"
+                                    name="pickUpTime"
+                                    value={formData.pickUpTime}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Pick Up Address and Postcode</span>
-                                <input type="text" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input
+                                    type="text"
+                                    name="pickUpAddress"
+                                    value={formData.pickUpAddress}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
                             </label>
                             <label className="block w-full">
                                 <span className="text-white">Drop Off Address</span>
-                                <input type="text" className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                                <input
+                                    type="text"
+                                    name="dropOffAddress"
+                                    value={formData.dropOffAddress}
+                                    onChange={handleChange}
+                                    className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
                             </label>
                         </div>
-                        <button className="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
+                        <button type="submit" className="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
                     </form>
                     <p className="text-gray-500 text-xs mt-4 text-center">Your information will not be used by third-parties for marketing.</p>
                 </div>

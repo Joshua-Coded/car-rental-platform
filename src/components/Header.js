@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import logo from '../images/logo.jpeg';
+import logo from '../images/logo1.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
