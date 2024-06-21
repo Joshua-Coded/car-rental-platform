@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import slide1 from '../images/slide1.jpeg';
 import slide2 from '../images/slide2.jpeg';
@@ -50,17 +51,38 @@ const CarouselComponent = () => {
         },
     ];
 
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
     return (
-        <div className="w-full max-w-4xl mx-auto mb-6 mt-10">
+        <motion.div
+            className="w-full max-w-4xl mx-auto mb-6 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={staggerContainer}
+        >
             {isDesktop ? (
-                <div className="bg-black p-4 rounded-lg">
+                <motion.div className="bg-black p-4 rounded-lg" variants={fadeInUp}>
                     <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
                         <div className="h-60 md:h-80">
                             <img src={slide1} alt="Luxury Coach 1" className="object-cover h-full w-full" />
                             <p className="legend">Luxury Coach 1</p>
                         </div>
                         <div className="h-60 md:h-80">
-                            <img src={slide1} alt="Luxury Coach 2" className="object-cover h-full w-full" />
+                            <img src={slide2} alt="Luxury Coach 2" className="object-cover h-full w-full" />
                             <p className="legend">Luxury Coach 2</p>
                         </div>
                         <div className="h-60 md:h-80">
@@ -68,22 +90,23 @@ const CarouselComponent = () => {
                             <p className="legend">Luxury Coach 3</p>
                         </div>
                     </Carousel>
-                </div>
+                </motion.div>
             ) : (
-                <div className="bg-black text-white p-4 rounded-lg space-y-8">
-                    <h1 className="text-3xl font-bold mb-4 text-center">Our Services</h1>
-                    <p className="text-lg text-center mb-8">Explore the range of luxury transport services we offer to cater to your needs.</p>
+                <motion.div className="bg-black text-white p-4 rounded-lg space-y-8" variants={fadeInUp}>
+                    <motion.h1 className="text-3xl font-bold mb-4 text-center" variants={fadeInUp}>Our Services</motion.h1>
+                    <motion.p className="text-lg text-center mb-8" variants={fadeInUp}>Explore the range of luxury transport services we offer to cater to your needs.</motion.p>
                     {services.map((service, index) => (
-                        <div key={index} className="space-y-2 p-4 border border-gray-700 rounded-lg">
-                            <img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-lg mb-2" />
-                            <h2 className="text-xl font-bold">{service.title}</h2>
-                            <p>{service.description}</p>
-                            <button className="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Learn More</button>
-                        </div>
+                        <motion.div key={index} className="space-y-2 p-4 border border-gray-700 rounded-lg" variants={fadeInUp}>
+                            <motion.img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-lg mb-2" variants={fadeInUp} />
+                            <motion.h2 className="text-xl font-bold" variants={fadeInUp}>{service.title}</motion.h2>
+                            <motion.p variants={fadeInUp}>{service.description}</motion.p>
+                            <motion.button className="bg-red-600 px-4 py-2 rounded hover:bg-red-700" variants={fadeInUp}>Learn More</motion.button>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             )}
-        </div>
+        </motion.div>
     );
 };
+
 export default CarouselComponent;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPhone, FaRegSnowflake, FaPlug, FaWifi, FaTv, FaWhatsapp, FaHandshake, FaPlay } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import localVideo from '../images/video4.mp4';
 
 const NewDesignComponent = () => {
@@ -13,46 +14,63 @@ const NewDesignComponent = () => {
         setIsModalOpen(false);
     };
 
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+    };
+
+    const staggerContainer = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
     return (
-        <div className="bg-black text-white py-10 px-6 flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12">
-            <div className="flex-1 md:w-2/3 bg-gray-900 p-6 rounded-lg">
+        <motion.div
+            className="bg-black text-white py-10 px-6 flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={staggerContainer}
+        >
+            <motion.div className="flex-1 md:w-2/3 bg-gray-900 p-6 rounded-lg" variants={fadeInUp}>
                 <div className="mb-8">
-                    {/* <video className="w-full h-64 md:h-80 rounded-lg mb-6" controls>
-                        <source src={localVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video> */}
                     <h1 className="text-3xl font-bold mb-4">Car Interior Features</h1>
                     <p className="text-lg mb-4">Discover the exceptional features of our luxury car interiors designed to provide the utmost comfort and convenience during your journey.</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                    <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-2" variants={staggerContainer}>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaPhone className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">Partition Cabin with Intercom</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaRegSnowflake className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">Refrigerated Refreshments</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaPlug className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">Multi Cabin Charging Functionality</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaWifi className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">In Cabin Wifi Functionality</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaTv className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">In Cabin Entertainment</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaWhatsapp className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">Communication</p>
-                        </div>
-                        <div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full">
+                        </motion.div>
+                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <FaHandshake className="text-red-600 text-lg mb-2" />
                             <p className="text-sm text-center">Meet & Greet</p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                     <p className="text-lg mt-6">Our luxury cars offer unparalleled comfort and convenience, ensuring a memorable travel experience. From advanced entertainment systems to high-speed connectivity, we provide everything you need for a luxurious journey.</p>
                     <div className="flex space-x-4 mt-6">
                         <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
@@ -61,14 +79,14 @@ const NewDesignComponent = () => {
                         </button>
                     </div>
                 </div>
-            </div>
-            <div className="flex-1 md:w-1/3 flex flex-col justify-center items-center">
+            </motion.div>
+            <motion.div className="flex-1 md:w-1/3 flex flex-col justify-center items-center" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                 <h1 className="text-4xl font-bold mb-4 text-center">Enquire More</h1>
                 <p className="text-lg mb-4 text-center">
                     Interested in learning more about our services? Contact us today to find out how we can make your travel experience unforgettable.
                 </p>
                 <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
-            </div>
+            </motion.div>
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
@@ -81,7 +99,7 @@ const NewDesignComponent = () => {
                     </div>
                 </div>
             )}
-        </div>
+        </motion.div>
     );
 };
 
