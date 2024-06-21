@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from "../images/logo.jpeg";
 import Header from './Header';
 import Hero from './Hero';
 import CarouselComponent from './CarouselComponent';

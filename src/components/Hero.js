@@ -6,7 +6,7 @@ import homeImage from '../images/slide2.jpeg';
 import slide1 from '../images/slide1.jpeg';
 import slide2 from '../images/slide2.jpeg';
 import slide3 from '../images/slide3.jpeg';
-import localVideo from '../images/video.mp4';
+import localVideo from '../images/video3.mp4';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -90,11 +90,9 @@ const Hero = () => {
             </div>
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="relative w-full max-w-2xl">
-                        <button onClick={closeModal} className="absolute top-4 right-4 text-white text-2xl">
-                            &times;
-                        </button>
-                        <video className="w-full h-auto max-h-[75vh] rounded-lg" controls autoPlay>
+                    <div className="relative w-full max-w-4xl p-6">
+                        <button className="absolute top-4 right-4 text-white text-2xl" onClick={closeModal}>X</button>
+                        <video className="w-full h-96 rounded-lg" controls autoPlay>
                             <source src={localVideo} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
