@@ -62,9 +62,9 @@ const Header = () => {
                     </button>
                     <nav className="flex flex-col space-y-6 text-center text-2xl">
                         <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
-                        <Link to="/business" className="hover:text-gray-300 cursor-pointer">Business</Link>
+                        <Link to="/" className="hover:text-gray-300 cursor-pointer">Business</Link>
+                        <Link to="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</Link>
                         <a href="#gallery" className="hover:text-gray-300 cursor-pointer">Gallery</a>
-                        <a href="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</a>
                         <a href="#aviation" className="hover:text-gray-300 cursor-pointer">Aviation</a>
                         <a href="#book-now" className="hover:text-gray-300 cursor-pointer">Book Now</a>
                         <a href="#featured" className="hover:text-gray-300 cursor-pointer">Featured</a>
