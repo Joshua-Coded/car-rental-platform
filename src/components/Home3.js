@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from './Header';
-import Hero from './Hero';
 import CarouselComponentWeddings from './CarouselComponent';
-import WhatWeDo from './WhatWeDo';
-import WhatYouCanExpect from './WhatYouCanExpect';
-import NewDesignComponent from './NewDesignComponent';
-import Gallery from './Gallery';
+import WhatWeDoWeddings from './WhatWeDoWeddings';
+import WhatYouCanExpectWeddings from './WhatYouCanExpectWeddings';
+import NewDesignComponentWeddings from './NewDesignComponentWeddings';
+import GalleryWeddings from './GalleryWeddings';
 import Footer from './Footer';
 import HeroWeddings from './HeroWeddings';
 
@@ -17,10 +16,10 @@ const Home = () => {
             <Header />
             <HeroWeddings />
             <CarouselComponentWeddings />
-            <WhatWeDo />
-            <WhatYouCanExpect />
-            <NewDesignComponent />
-            <Gallery />
+            <WhatWeDoWeddings />
+            <WhatYouCanExpectWeddings />
+            <NewDesignComponentWeddings />
+            <GalleryWeddings />
             <Footer />
         </div>
     );

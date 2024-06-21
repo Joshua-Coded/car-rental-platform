@@ -27,7 +27,7 @@ const HeroWeddings = () => {
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12">
                 <div className="max-w-lg space-y-6 text-center md:text-left">
-                    <h1 className="text-2xl md:text-5xl font-semibold">Exotic Wheels is your go-to provider for Weddings landjet and vehicle hire in the UK.</h1>
+                    <h1 className="text-2xl md:text-5xl font-semibold"> Weddings Exotic Wheels is your go-to provider for Weddings landjet and vehicle hire in the UK.</h1>
                     <p className="text-md md:text-lg">We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience. Connect | Book | Enquire</p>
                     <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                         <button className="bg-red-600 px-4 py-2 rounded hover:bg-red-700">View Services</button>

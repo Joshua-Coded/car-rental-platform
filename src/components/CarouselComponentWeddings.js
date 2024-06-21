@@ -71,7 +71,7 @@ const CarouselComponentWeddings = () => {
                 </div>
             ) : (
                 <div className="bg-black text-white p-4 rounded-lg space-y-8">
-                    <h1 className="text-3xl font-bold mb-4 text-center">Our Services</h1>
+                    <h1 className="text-3xl font-bold mb-4 text-center">Our Services for Weddings</h1>
                     <p className="text-lg text-center mb-8">Explore the range of luxury transport services we offer to cater to your needs.</p>
                     {services.map((service, index) => (
                         <div key={index} className="space-y-2 p-4 border border-gray-700 rounded-lg">
