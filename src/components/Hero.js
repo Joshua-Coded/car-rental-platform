@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import homeImage from '../images/logo.png';
 import slide1 from '../images/slide1.jpeg';
-import slide3 from '../images/slide3.jpeg';
+
 import localVideo from '../images/video3.mp4';
 
 const Hero = () => {
