@@ -176,7 +176,7 @@ const Hero = () => {
                 viewport={{ once: false }}
                 variants={staggerContainer}
             >
-                <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
+                {/* <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
                     <motion.div className="h-70 w-1/2 mx-auto" variants={fadeInUp}>
                         <img src={slide1} alt="Slide 1" className="h-full w-full object-cover" />
                         <p className="legend">Luxury Coach 1</p>
@@ -189,7 +189,7 @@ const Hero = () => {
                         <img src={slide1} alt="Slide 3" className="h-full w-full object-cover" />
                         <p className="legend">Luxury Coach 3</p>
                     </motion.div>
-                </Carousel>
+                </Carousel> */}
             </motion.div>
         </>
     );

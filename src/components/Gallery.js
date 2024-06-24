@@ -43,11 +43,11 @@ const Gallery = () => {
             <motion.p className="text-center text-lg mb-8" variants={fadeInUp}>
                 Take a look at our collection of luxurious travel experiences. Each image captures the essence of comfort and elegance.
             </motion.p>
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4" initial="hidden" whileInView="visible" viewport={{ once: false }}>
+            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center" initial="hidden" whileInView="visible" viewport={{ once: false }}>
                 {images.map((image) => (
                     <motion.div
                         key={image.id}
-                        className="text-center relative overflow-hidden rounded-lg cursor-pointer"
+                        className="text-center relative overflow-hidden rounded-lg cursor-pointer w-64 h-64 md:w-96 md:h-96"
                         onClick={() => openLightbox(image)}
                         initial="hidden"
                         whileInView="visible"
