@@ -73,7 +73,7 @@ const HeroServices = () => {
                     variants={staggerContainer}
                 >
                     <motion.div className="max-w-lg space-y-6 text-center md:text-left" variants={fadeInUp}>
-                        <h1 className="text-2xl mt-10 md:text-5xl font-semibold">Luxury Landjet Services Hire in the UK.</h1>
+                        <h1 className="text-2xl mt-10 md:text-5xl font-semibold">Luxury Landjet Service Hire in the UK.</h1>
                         <p className="text-md mt-10 md:text-lg">Experience unmatched comfort, style, and convenience with Exotic Wheels</p>
                         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
                             <button className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</button>
