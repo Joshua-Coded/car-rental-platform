@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaPhone, FaRegSnowflake, FaPlug, FaWifi, FaTv, FaWhatsapp, FaHandshake, FaPlay } from 'react-icons/fa';
-import localVideo from '../images/video4.mp4';
+import localVideo from '../images/bgVideo2.mp4';
 
 const NewDesignComponentWeddings = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

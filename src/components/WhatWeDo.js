@@ -2,8 +2,8 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import leftImage from '../images/slide1.jpeg';
-import rightImage from '../images/slide2.jpeg';
+import leftImage from '../images/image11.jpg';
+import rightImage from '../images/image12.jpg';
 
 const WhatWeDo = () => {
     const fadeInUp = {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaPhone, FaRegSnowflake, FaPlug, FaWifi, FaTv, FaWhatsapp, FaHandshake, FaPlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import localVideo from '../images/video4.mp4';
+import localVideo from '../images/bgVideo2.mp4';
 
 const NewDesignComponent = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,42 +39,42 @@ const NewDesignComponent = () => {
         >
             <motion.div className="flex-1 md:w-2/3 bg-gray-900 p-6 rounded-lg" variants={fadeInUp}>
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-4">Car Interior Features</h1>
-                    <p className="text-lg mb-4">Discover the exceptional features of our luxury car interiors designed to provide the utmost comfort and convenience during your journey.</p>
+                    <h1 className="text-3xl font-bold mb-4 text-center">Car Interior Features</h1>
+                    <p className="text-lg mb-4 text-center">Discover the exceptional features of our luxury car interiors designed to provide the utmost comfort and convenience during your journey.</p>
                     <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-2" variants={staggerContainer}>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaPhone className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">Partition Cabin with Intercom</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaPhone className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">Partition Cabin with Intercom</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaRegSnowflake className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">Refrigerated Refreshments</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaRegSnowflake className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">Refrigerated Refreshments</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaPlug className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">Multi Cabin Charging Functionality</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaPlug className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">Multi Cabin Charging Functionality</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaWifi className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">In Cabin Wifi Functionality</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaWifi className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">In Cabin Wifi Functionality</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaTv className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">In Cabin Entertainment</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaTv className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">In Cabin Entertainment</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaWhatsapp className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">Communication</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaWhatsapp className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">Communication</p>
                         </motion.div>
-                        <motion.div className="bg-gray-800 p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                            <FaHandshake className="text-red-600 text-lg mb-2" />
-                            <p className="text-sm text-center">Meet & Greet</p>
+                        <motion.div className="bg-[#fff] p-4 rounded-lg flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                            <FaHandshake className="text-[#470A1C] text-lg mb-2" />
+                            <p className="text-sm text-left text-[#000]">Meet & Greet</p>
                         </motion.div>
                     </motion.div>
-                    <p className="text-lg mt-6">Our luxury cars offer unparalleled comfort and convenience, ensuring a memorable travel experience. From advanced entertainment systems to high-speed connectivity, we provide everything you need for a luxurious journey.</p>
+                    <p className="text-lg mt-6 text-center">Our luxury cars offer unparalleled comfort and convenience, ensuring a memorable travel experience. From advanced entertainment systems to high-speed connectivity, we provide everything you need for a luxurious journey.</p>
                     <div className="flex space-x-4 mt-6">
-                        <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
-                        <button onClick={openModal} className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center">
+                        <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
+                        <button onClick={openModal} className="bg-[#000D28] text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center">
                             <FaPlay className="mr-2" /> Watch Now
                         </button>
                     </div>
@@ -85,7 +85,7 @@ const NewDesignComponent = () => {
                 <p className="text-lg mb-4 text-center">
                     Interested in learning more about our services? Contact us today to find out how we can make your travel experience unforgettable.
                 </p>
-                <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
+                <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
             </motion.div>
 
             {isModalOpen && (

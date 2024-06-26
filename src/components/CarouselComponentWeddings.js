@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import slide1 from '../images/slide1.jpeg';
-import slide2 from '../images/slide2.jpeg';
-import slide3 from '../images/slide3.jpeg';
-import businessImage from '../images/slide4.jpeg';
-import weddingImage from '../images/slide5.jpeg';
-import airportImage from '../images/slide6.jpeg';
-import corporateImage from '../images/slide1.jpeg';
-import privateHireImage from '../images/slide4.jpeg';
+import slide1 from '../images/image1.jpg';
+import slide2 from '../images/image20.jpg';
+import slide3 from '../images/image22.jpg';
+import businessImage from '../images/image23.jpg';
+import weddingImage from '../images/image25.jpg';
+import airportImage from '../images/image27.jpg';
+import corporateImage from '../images/image28.jpg';
+import privateHireImage from '../images/image30.jpg';
 
 const CarouselComponentWeddings = () => {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);

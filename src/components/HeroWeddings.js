@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { FaPlay } from 'react-icons/fa';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeImage from '../images/slide1.jpeg';
-import slide1 from '../images/slide1.jpeg';
-import slide2 from '../images/slide2.jpeg';
-import slide3 from '../images/slide3.jpeg';
-import localVideo from '../images/video3.mp4';
+import homeVideo from '../images/bgVideo.mp4';
+import slide1 from '../images/image1.jpg';
+import slide2 from '../images/image2.jpg';
+import slide3 from '../images/image3.jpg';
+import localVideo from '../images/bgVideo2.mp4';
 
 const HeroWeddings = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +22,7 @@ const HeroWeddings = () => {
     return (
         <div
             className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
-            style={{ backgroundImage: `url(${homeImage})` }}
+            style={{ backgroundImage: `url(${homeVideo})` }}
         >
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12">

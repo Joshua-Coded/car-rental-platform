@@ -1,25 +1,30 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-10 px-6">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                <div className="mb-4 md:mb-0 text-center md:text-left">
+        <footer className="bg-[#470A1C] text-white py-10 px-6">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center md:text-left">
                     <img src={logo} alt="Company Logo" className="h-16 mx-auto md:mx-0" />
-                    <p className="mt-2">Exotic Wheels - Travel in style and comfort</p>
+                    <p className="mt-4">
+                        Exotic Wheels<br />
+                        Travel in style and comfort
+                    </p>
                 </div>
-                <div className="mb-4 md:mb-0 text-center md:text-left">
-                    <p className="text-lg font-bold">Quick Links:</p>
-                    <ul className="space-y-2 mt-2">
-                        <li><a href="#home" className="hover:text-gray-400">Business</a></li>
-                        <li><a href="#services" className="hover:text-gray-400">Weddings</a></li>
-                        <li><a href="#about" className="hover:text-gray-400">Services</a></li>
+                <div className="text-center md:text-left">
+                    <p className="text-lg font-bold mb-4">Quick Links:</p>
+                    <ul className="space-y-2">
+                        <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
+                        <li><Link to="/services" className="hover:text-gray-400">Services</Link></li>
+                        <li><Link to="/weddings" className="hover:text-gray-400">Weddings</Link></li>
+                        <li><Link to="/contact" className="hover:text-gray-400">Contact</Link></li>
                     </ul>
                 </div>
-                <div className="mb-4 md:mb-0 text-center md:text-left">
-                    <p className="text-lg font-bold">Connect with us:</p>
+                <div className="text-center md:text-left">
+                    <p className="text-lg font-bold mb-4">Connect with us:</p>
                     <div className="flex justify-center md:justify-start space-x-4 mt-2">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
                             <FaFacebook size={24} />
@@ -31,9 +36,11 @@ const Footer = () => {
                             <FaTwitter size={24} />
                         </a>
                     </div>
-                </div>
-                <div className="text-center md:text-right">
-                    <p>&copy; {new Date().getFullYear()} Exotic Wheels. All rights reserved.</p>
+                    <p className="mt-4">
+                        &copy; {new Date().getFullYear()} Exotic Wheels<br />
+                        All rights reserved.<br />
+                        Powered by CREIT TECHNOLOGIES LIMITED
+                    </p>
                 </div>
             </div>
         </footer>

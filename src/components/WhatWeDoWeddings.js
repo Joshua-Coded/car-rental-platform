@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import leftImage from '../images/slide1.jpeg';
-import rightImage from '../images/slide2.jpeg';
+import leftImage from '../images/image15.jpg';
+import rightImage from '../images/image16.jpg';
 
 const WhatWeDoWeddings = () => {
     return (

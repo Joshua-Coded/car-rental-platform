@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faInfoCircle, faConciergeBell, faImage } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Header from './Header';
 import Hero from './Hero';
 import CarouselComponent from './CarouselComponent';
@@ -62,7 +63,7 @@ const Home = () => {
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                 <Footer />
             </motion.div>
-            <div className="fixed bottom-0 w-full bg-black text-white flex justify-around py-2 md:hidden">
+            <div className="fixed bottom-0 w-full bg-black text-white flex justify-around py-2 md:hidden z-50">
                 <Link to="hero" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
                     <FontAwesomeIcon icon={faHome} size="lg" className="text-[#fff]" />
                     <span className="text-xs text-[#fff]">Home</span>
@@ -79,6 +80,14 @@ const Home = () => {
                     <FontAwesomeIcon icon={faImage} size="lg" className="text-[#fff]" />
                     <span className="text-xs text-[#fff]">Gallery</span>
                 </Link>
+            </div>
+            <div className="fixed bottom-16 right-4 flex flex-col space-y-4 z-50">
+                <a href="tel:+447438969564" className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
+                    <FontAwesomeIcon icon={faPhone} size="lg" className="text-white" />
+                </a>
+                <a href="https://wa.me/+447438969564" target="_blank" rel="noopener noreferrer" className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
+                    <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-white" />
+                </a>
             </div>
         </div>
     );

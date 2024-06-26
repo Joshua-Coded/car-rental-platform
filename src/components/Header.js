@@ -30,7 +30,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`sticky top-0 flex justify-between items-center p-6 ${scrolled ? 'bg-gray-900 text-white' : 'bg-black text-black'} z-50 h-20 transition-colors duration-300`}>
+        <header className={`sticky top-0 flex justify-between items-center p-6 ${scrolled ? 'bg-[#470A1C] text-white' : 'bg-black text-white'} z-50 h-20 transition-colors duration-300`}>
             <div className="flex items-center space-x-4">
                 <button
                     className="block md:hidden focus:outline-none"
@@ -50,10 +50,10 @@ const Header = () => {
                 <img src={logo} alt="Company Logo" className="h-12" />
             </div>
             <div className="hidden md:block text-right">
-                <button className="bg-red-600 px-6 py-3 rounded-full w-50 h-50 hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
+                <button className="bg-[#000D28] px-6 py-3 rounded-full w-50 h-50 hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
             </div>
             {isOpen && (
-                <div className="fixed inset-0 bg-gray-900 text-white flex flex-col items-center justify-center z-50">
+                <div className="fixed inset-0 bg-[#470A1C]  text-white flex flex-col items-center justify-center z-50">
                     <button
                         className="absolute top-4 right-4 focus:outline-none cursor-pointer"
                         onClick={toggleMenu}
@@ -64,24 +64,7 @@ const Header = () => {
                         <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
                         <Link to="/" className="hover:text-gray-300 cursor-pointer">Business</Link>
                         <Link to="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</Link>
-                        <a href="#gallery" className="hover:text-gray-300 cursor-pointer">Gallery</a>
-                        <a href="#aviation" className="hover:text-gray-300 cursor-pointer">Aviation</a>
-                        <a href="#book-now" className="hover:text-gray-300 cursor-pointer">Book Now</a>
-                        <a href="#featured" className="hover:text-gray-300 cursor-pointer">Featured</a>
                     </nav>
-                    <div className="mt-6">
-                        <button className="bg-gray-800 px-6 py-3 rounded hover:bg-red-700 text-lg flex items-center mb-4 cursor-pointer">
-                            <FontAwesomeIcon icon={faWhatsapp} className="mr-2" /> Enquire
-                        </button>
-                    </div>
-                    <div className="absolute bottom-10 flex space-x-10">
-                        <a href="https://wa.me/+250792402699" className="text-green-500 cursor-pointer">
-                            <FontAwesomeIcon icon={faWhatsapp} className="w-8 h-8" />
-                        </a>
-                        <a href="tel:+250792402699" className="text-white cursor-pointer">
-                            <FontAwesomeIcon icon={faPhone} className="w-8 h-8" />
-                        </a>
-                    </div>
                 </div>
             )}
         </header>

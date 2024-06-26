@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import slide1 from '../images/slide1.jpeg';
-import slide2 from '../images/slide2.jpeg';
-import slide3 from '../images/slide3.jpeg';
+import slide1 from '../images/image1.jpg';
+import slide2 from '../images/image30.jpg';
+import slide3 from '../images/image20.jpg';
 
 const CarouselComponent = () => {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
@@ -45,15 +45,15 @@ const CarouselComponent = () => {
                 <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
                     <div className="h-60 md:h-80">
                         <img src={slide1} alt="Luxury Coach 1" className="object-cover h-full w-full" />
-                        <p className="legend">Luxury Coach 1</p>
+                        <p className="legend">Interior view</p>
                     </div>
                     <div className="h-60 md:h-80">
                         <img src={slide2} alt="Luxury Coach 2" className="object-cover h-full w-full" />
-                        <p className="legend">Luxury Coach 2</p>
+                        <p className="legend">Exterior View</p>
                     </div>
                     <div className="h-60 md:h-80">
                         <img src={slide3} alt="Luxury Coach 3" className="object-cover h-full w-full" />
-                        <p className="legend">Luxury Coach 3</p>
+                        <p className="legend">Close Range View</p>
                     </div>
                 </Carousel>
             </motion.div>
