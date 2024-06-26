@@ -3,35 +3,23 @@ import { motion } from 'framer-motion';
 import image1 from '../images/image1.jpg';
 import image18 from '../images/image18.jpg';
 import image20 from '../images/image20.jpg';
-import image21 from '../images/image21.jpg';
-import image22 from '../images/image22.jpg';
-import image23 from '../images/image23.jpg';
-import image24 from '../images/image24.jpg';
-import image25 from '../images/image25.jpg';
 import image26 from '../images/image26.jpg';
 import image27 from '../images/image27.jpg';
 import image28 from '../images/image28.jpg';
 import image29 from '../images/image29.jpg';
 import image30 from '../images/image30.jpg';
 
-
 const Gallery = () => {
     const images = [
         { id: 1, src: image1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
         { id: 6, src: image18, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image20, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image21, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image22, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image23, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image24, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image25, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image26, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image27, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image28, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image29, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image30, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
     ];
-
 
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
@@ -63,11 +51,11 @@ const Gallery = () => {
             <motion.p className="text-center text-lg mb-8" variants={fadeInUp}>
                 Take a look at our collection of luxurious travel experiences. Each image captures the essence of comfort and elegance.
             </motion.p>
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center" initial="hidden" whileInView="visible" viewport={{ once: false }}>
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center" initial="hidden" whileInView="visible" viewport={{ once: false }}>
                 {images.map((image) => (
                     <motion.div
                         key={image.id}
-                        className="text-center relative overflow-hidden rounded-lg cursor-pointer w-64 h-64 md:w-80 md:h-80 mx-auto"
+                        className="text-center relative overflow-hidden rounded-lg cursor-pointer w-90 h-80 mx-auto"
                         onClick={() => openLightbox(image)}
                         initial="hidden"
                         whileInView="visible"
@@ -105,5 +93,6 @@ const Gallery = () => {
             )}
         </motion.div>
     );
-}
+};
+
 export default Gallery;

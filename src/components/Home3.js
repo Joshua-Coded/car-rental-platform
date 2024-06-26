@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Header from './Header';
-import HeroWeddings from './HeroWeddings';
-import CarouselComponentWeddings from './CarouselComponentWeddings';
-import WhatWeDoWeddings from './WhatWeDoWeddings';
+import HeroWeddings from './Hero';
+import CarouselComponentWeddings from './CarouselComponent';
+import WhatWeDoWeddings from './WhatWeDo';
 import WhatYouCanExpect from './WhatYouCanExpect';
-import NewDesignComponent from './NewDesignComponent';
+import NewDesignComponentWeddings from './NewDesignComponent';
 import Gallery from './Gallery';
 import Footer from './Footer';
+import Booking from './Booking';
+import NewService from './NewService';
 
 const Home3 = () => {
     const fadeInUp = {
@@ -40,6 +42,11 @@ const Home3 = () => {
                     <CarouselComponentWeddings />
                 </motion.div>
             </Element>
+            <Element name="newService">
+                <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+                    <NewService />
+                </motion.div>
+            </Element>
             <Element name="whatWeDo">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <WhatWeDoWeddings />
@@ -52,12 +59,17 @@ const Home3 = () => {
             </Element>
             <Element name="newDesignComponent">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
-                    <NewDesignComponent />
+                    <NewDesignComponentWeddings />
                 </motion.div>
             </Element>
             <Element name="gallery">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <Gallery />
+                </motion.div>
+            </Element>
+            <Element name="booking">
+                <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+                    <Booking />
                 </motion.div>
             </Element>
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
@@ -72,7 +84,7 @@ const Home3 = () => {
                     <FontAwesomeIcon icon={faInfoCircle} size="lg" className="text-[#fff]" />
                     <span className="text-xs text-[#fff]">Carousel</span>
                 </Link>
-                <Link to="whatWeDo" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
+                <Link to="newService" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
                     <FontAwesomeIcon icon={faConciergeBell} size="lg" className="text-[#fff]" />
                     <span className="text-xs text-[#fff]">Services</span>
                 </Link>
@@ -82,10 +94,10 @@ const Home3 = () => {
                 </Link>
             </div>
             <div className="fixed bottom-16 right-4 flex flex-col space-y-4 z-50">
-                <a href="tel:+447438969564" className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
+                <a href="tel:+447438969564" className="bg-[#470A1C] p-3 rounded-full shadow-lg cursor-pointer">
                     <FontAwesomeIcon icon={faPhone} size="lg" className="text-white" />
                 </a>
-                <a href="https://wa.me/+447438969564" target="_blank" rel="noopener noreferrer" className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
+                <a href="https://wa.me/+447438969564" target="_blank" rel="noopener noreferrer" className="bg-[#470A1C] p-3 rounded-full shadow-lg cursor-pointer">
                     <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-white" />
                 </a>
             </div>

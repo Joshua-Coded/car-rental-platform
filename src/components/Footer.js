@@ -14,7 +14,7 @@ const Footer = () => {
                         Travel in style and comfort
                     </p>
                 </div>
-                <div className="text-center md:text-left">
+                <div className="hidden md:block text-center md:text-left">
                     <p className="text-lg font-bold mb-4">Quick Links:</p>
                     <ul className="space-y-2">
                         <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
