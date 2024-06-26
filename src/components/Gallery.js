@@ -1,22 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import image1 from '../images/image1.jpg';
-import image2 from '../images/image2.jpg';
-import image3 from '../images/image3.jpg';
-import image4 from '../images/image4.jpg';
-import image5 from '../images/image5.jpg';
-import image6 from '../images/image6.jpg';
-import image7 from '../images/image7.jpg';
-import image8 from '../images/image8.jpg';
-import image9 from '../images/image9.jpg';
-import image10 from '../images/image10.jpg';
-import image11 from '../images/image11.jpg';
-import image12 from '../images/image12.jpg';
-import image13 from '../images/image13.jpg';
-import image14 from '../images/image14.jpg';
-import image15 from '../images/image15.jpg';
-import image16 from '../images/image16.jpg';
-import image17 from '../images/image17.jpg';
 import image18 from '../images/image18.jpg';
 import image20 from '../images/image20.jpg';
 import image21 from '../images/image21.jpg';
@@ -34,22 +18,6 @@ import image30 from '../images/image30.jpg';
 const Gallery = () => {
     const images = [
         { id: 1, src: image1, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image2, alt: 'We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience.' },
-        { id: 3, src: image3, alt: 'Our dedicated team ensures every detail is handled, offering a seamless and luxurious journey.' },
-        { id: 4, src: image4, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 5, src: image5, alt: 'We offer a premium fleet of high-end landjets, perfect for business travel, special events, and anyone seeking a superior travel experience.' },
-        { id: 6, src: image6, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image7, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image8, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image9, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image10, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image11, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image12, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image13, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image14, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image15, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image16, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 6, src: image17, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image18, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image20, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image21, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneAlt, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo.png';
 
 const Header = () => {

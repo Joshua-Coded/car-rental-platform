@@ -73,10 +73,7 @@ const NewDesignComponent = () => {
                     </motion.div>
                     <p className="text-lg mt-6 text-center">Our luxury cars offer unparalleled comfort and convenience, ensuring a memorable travel experience. From advanced entertainment systems to high-speed connectivity, we provide everything you need for a luxurious journey.</p>
                     <div className="flex space-x-4 mt-6">
-                        <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
-                        <button onClick={openModal} className="bg-[#000D28] text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center">
-                            <FaPlay className="mr-2" /> Watch Now
-                        </button>
+                        <button className="bg-[#470A1C] text-white text-center px-4 py-2 rounded hover:bg-red-700">Book Now</button>
                     </div>
                 </div>
             </motion.div>
@@ -85,7 +82,7 @@ const NewDesignComponent = () => {
                 <p className="text-lg mb-4 text-center">
                     Interested in learning more about our services? Contact us today to find out how we can make your travel experience unforgettable.
                 </p>
-                <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Enquire More</button>
+                <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Book Now</button>
             </motion.div>
 
             {isModalOpen && (
