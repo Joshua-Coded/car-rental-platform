@@ -60,9 +60,14 @@ const Header = () => {
                         <FontAwesomeIcon icon={faTimes} className="w-6 h-6 text-white" />
                     </button>
                     <nav className="flex flex-col space-y-6 text-center text-2xl">
-                        <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
                         <Link to="/" className="hover:text-gray-300 cursor-pointer">Business</Link>
+                        <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
                         <Link to="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</Link>
+                        <Link to="/airport-transfers" className="hover:text-gray-300 cursor-pointer">Airport Transfers</Link>
+                        <Link to="/special-events" className="hover:text-gray-300 cursor-pointer">Special Events</Link>
+                        <Link to="/customizable-packages" className="hover:text-gray-300 cursor-pointer">Customized Packages</Link>
+                        <Link to="/safety-and-comfort" className="hover:text-gray-300 cursor-pointer">Safety And Comfort</Link>
+
                     </nav>
                 </div>
             )}

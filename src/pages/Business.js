@@ -1,10 +1,10 @@
 import React from 'react';
+import Home from '../components/Home';
 
 const Business = () => {
     return (
         <div>
-            <h1>Business Page</h1>
-            <p>This is the business page content.</p>
+            <Home />
         </div>
     );
 };
