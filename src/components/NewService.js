@@ -32,8 +32,9 @@ const NewService = () => {
             viewport={{ once: false }}
             variants={staggerContainer}
         >
-            <motion.h1 className="text-3xl font-bold mb-6 text-center" variants={fadeInUp}>Our Services</motion.h1>
-            <motion.p className="text-left">Offering an elegant but discreet exterior design our Mercedes Jet Class is not just a means of transport but a real statement piece</motion.p>
+            <motion.h1 className="text-4xl font-bold mb-6 text-center" variants={fadeInUp}>Our Services</motion.h1>
+            <motion.p className="text-center">At Exotic Wheels, we pride ourselves on delivering exceptional service. Our luxury landjets are equipped with the latest amenities to ensure a seamless and luxurious journey.</motion.p>
+            <br />
             <motion.div className="flex flex-col items-center" variants={fadeInUp}>
                 <img src={serviceImage} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <motion.h2 className='text-left'>Event</motion.h2>
@@ -78,7 +79,7 @@ const NewService = () => {
             <br />
             <motion.div className="flex flex-col items-center" variants={fadeInUp}>
                 <img src={serviceImage6} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
-                <motion.h2 className='text-left'>Swift Aviation</motion.h2>
+                <motion.h2 className='text-left'>Exotic Aviation</motion.h2>
                 <p className="text-lg mb-4 text-center">We offer a variety of exceptional services to meet your needs and ensure you have the best experience possible.</p>
                 <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Coming Soon</button>
             </motion.div>

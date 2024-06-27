@@ -4,8 +4,8 @@ import Home from './components/Home';
 import Business from './pages/Business';
 import Services from './pages/Services';
 import Weddings from './pages/Weddings';
-import Header from './components/Header';
-import './App.css';
+// import './App.css';
+import './index.css';
 
 function App() {
   return (

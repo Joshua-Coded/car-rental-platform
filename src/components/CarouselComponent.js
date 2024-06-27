@@ -41,6 +41,12 @@ const CarouselComponent = () => {
             viewport={{ once: false }}
             variants={staggerContainer}
         >
+            <motion.div className="bg-white p-4 rounded-lg text-white mb-6" variants={fadeInUp}>
+                <h1 className="text-4xl font-bold mb-4 text-center text-black">Welcome to Exotic Wheels</h1>
+                <p className="text-center text-black">
+                    Your premier provider for luxury landjet hire across the UK. Whether you're traveling for business or pleasure, our high-end fleet ensures a superior travel experience tailored to your needs.
+                </p>
+            </motion.div>
             <motion.div className="bg-black p-4 rounded-lg" variants={fadeInUp}>
                 <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
                     <div className="h-60 md:h-80">
