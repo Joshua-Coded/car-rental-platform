@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import serviceImage from '../images/image8.jpg';
-import serviceImage1 from '../images/image29.jpg';
-import serviceImage2 from '../images/image26.jpg';
+import air from '../images/air.JPG';
+import weddings from '../images/weddings.JPG';
 import serviceImage3 from '../images/image30.jpg';
 import serviceImage4 from '../images/image15.jpg';
 import serviceImage5 from '../images/image18.jpg';
@@ -31,6 +31,7 @@ const NewService = () => {
             whileInView="visible"
             viewport={{ once: false }}
             variants={staggerContainer}
+            id="services" // Add ID here
         >
             <motion.h1 className="text-4xl font-bold mb-6 text-center text-[#000D28]" variants={fadeInUp}>Exceptional Landjet Services</motion.h1>
             <motion.h2 className="text-2xl text-center text-[#000D28]">Quality and sophistication in every detail</motion.h2><br />
@@ -40,22 +41,22 @@ const NewService = () => {
                 <img src={serviceImage} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <motion.h2 className='text-left text-[#000D28]'>Business Travel Services</motion.h2>
                 <p className="text-lg mb-4 text-center text-[#000D28]">Optimize your business travel with our high-end landjets, offering the perfect environment for productivity and relaxation.</p>
-                <Link to="/">
+                <Link to="/business-travel">
                     <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Learn More</button>
                 </Link>
             </motion.div>
             <br />
             <motion.div className="flex flex-col items-center" variants={fadeInUp}>
-                <img src={serviceImage1} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
+                <img src={weddings} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <motion.h2 className='text-left text-[#000D28]'>Wedding Services</motion.h2>
                 <p className="text-lg mb-4 text-center text-[#000D28]">Make your special day unforgettable by arriving in style with our luxury landjets. Our team ensures a seamless experience from start to finish.</p>
-                <Link to="/weddings">
+                <Link to="/wedding-services">
                     <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Learn More</button>
                 </Link>
             </motion.div>
             <br />
             <motion.div className="flex flex-col items-center" variants={fadeInUp}>
-                <img src={serviceImage2} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
+                <img src={air} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <motion.h2 className='text-left text-[#000D28]'>Airport Transfers</motion.h2>
                 <p className="text-lg mb-4 text-center text-[#000D28]">Experience hassle-free airport transfers with Exotic Wheels. Our landjets provide a luxurious transition from land to air travel.</p>
                 <Link to="/airport-transfers">
@@ -93,5 +94,4 @@ const NewService = () => {
         </motion.div>
     );
 };
-
 export default NewService;

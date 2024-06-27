@@ -79,7 +79,7 @@ const Hero = () => {
                         <h1 className="text-4xl mt-10 md:text-5xl font-semibold">Luxury Landjet Hire in the UK.</h1>
                         <p className="text-md mt-10 md:text-lg">Experience unmatched comfort, style, and convenience with Exotic Wheels</p>
                         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                            <Link to="/services" className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</Link>
+                            <Link to="/#services" className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</Link>
                             <button onClick={openModal} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center">
                                 <FaPlay className="mr-2" /> Watch Now
                             </button>

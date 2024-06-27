@@ -71,10 +71,7 @@ const NewDesignComponent = () => {
                             <p className="text-sm text-left text-[#000]">Meet & Greet</p>
                         </motion.div>
                     </motion.div>
-                    <p className="text-lg mt-6 text-center">Our luxury cars offer unparalleled comfort and convenience, ensuring a memorable travel experience. From advanced entertainment systems to high-speed connectivity, we provide everything you need for a luxurious journey.</p>
-                    <div className="flex space-x-4 mt-6">
-                        <a href="https://wa.link/o58u2z" className="bg-[#470A1C] text-white text-center px-4 py-2 rounded hover:bg-red-700">Book Now</a>
-                    </div>
+
                 </div>
             </motion.div>
             <motion.div className="flex-1 md:w-1/3 flex flex-col justify-center items-center" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
