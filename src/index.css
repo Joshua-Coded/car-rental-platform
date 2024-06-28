@@ -75,3 +75,17 @@ button {
     font-size: 2rem;
     cursor: pointer;
 }
+
+input[type="date"],
+input[type="time"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+}

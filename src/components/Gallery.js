@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import image13 from '../images/image1.jpg';
-import image6 from '../images/image18.jpg';
 import image21 from '../images/image20.jpg';
 import image25 from '../images/image26.jpg';
 import image22 from '../images/image27.jpg';
 import image29 from '../images/image29.jpg';
 import image30 from '../images/image30.jpg';
-import image15 from "../images/image12.jpg";
-import image16 from "../images/image16.jpg";
+
 
 const Gallery = () => {
     const images = [
         { id: 1, src: image30, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image15, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: image16, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 4, src: image21, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 5, src: image25, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
         { id: 6, src: image22, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
