@@ -96,6 +96,8 @@ const Hero = () => {
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleChange}
+                                        placeholder="Enter your full name"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
@@ -105,6 +107,7 @@ const Hero = () => {
                                         name="journeyRequired"
                                         value={formData.journeyRequired}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     >
                                         <option>One Way</option>
@@ -118,7 +121,9 @@ const Hero = () => {
                                         name="pickUpDate"
                                         value={formData.pickUpDate}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -128,7 +133,9 @@ const Hero = () => {
                                         name="pickUpTime"
                                         value={formData.pickUpTime}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -138,6 +145,8 @@ const Hero = () => {
                                         name="pickUpAddress"
                                         value={formData.pickUpAddress}
                                         onChange={handleChange}
+                                        placeholder="Enter pick-up address and postcode"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
@@ -148,12 +157,15 @@ const Hero = () => {
                                         name="dropOffAddress"
                                         value={formData.dropOffAddress}
                                         onChange={handleChange}
+                                        placeholder="Enter drop-off address"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
                             </div>
                             <button type="submit" className="w-full bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
                         </form>
+
 
 
                         <p className="text-gray-500 text-xs mt-4 text-center">Your information will not be used by third-parties for marketing.</p>

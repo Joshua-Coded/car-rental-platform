@@ -94,3 +94,7 @@ select {
     height: 2.5rem;
     /* Ensure uniform height */
 }
+
+input::placeholder {
+    color: black;
+}
