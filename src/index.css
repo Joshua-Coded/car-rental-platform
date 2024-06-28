@@ -76,8 +76,11 @@ button {
     cursor: pointer;
 }
 
+/* styles.css */
+input[type="text"],
 input[type="date"],
-input[type="time"] {
+input[type="time"],
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -88,4 +91,6 @@ input[type="time"] {
     background-color: white;
     color: black;
     font-size: 1rem;
+    height: 2.5rem;
+    /* Ensure uniform height */
 }
