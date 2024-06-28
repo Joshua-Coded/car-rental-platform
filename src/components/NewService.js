@@ -31,9 +31,9 @@ const NewService = () => {
             whileInView="visible"
             viewport={{ once: false }}
             variants={staggerContainer}
-            id="services" // Add ID here
+            id="services"
         >
-            <motion.h1 className="text-4xl font-bold mb-6 text-center text-[#000D28]" variants={fadeInUp}>Exceptional Landjet Services</motion.h1>
+            <motion.h1 className="text-2xl font-bold mb-6 text-center text-[#000D28]" variants={fadeInUp}>Exceptional Landjet Services</motion.h1>
             <motion.h2 className="text-2xl text-center text-[#000D28]">Quality and sophistication in every detail</motion.h2><br />
             <motion.p className="text-center text-[#000D28]">At Exotic Wheels, we pride ourselves on delivering exceptional service. Our luxury landjets are equipped with the latest amenities to ensure a seamless and luxurious journey.</motion.p>
             <br />
