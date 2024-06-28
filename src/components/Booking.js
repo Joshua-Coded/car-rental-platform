@@ -131,7 +131,7 @@ const Booking = () => {
                                     name="pickUpAddress"
                                     value={formData.pickUpAddress}
                                     onChange={handleChange}
-                                    placeholder="Enter the pick-up address and postcode"
+                                    placeholder="Enter pick-up address and postcode"
                                     required
                                     className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                 />
@@ -143,7 +143,7 @@ const Booking = () => {
                                     name="dropOffAddress"
                                     value={formData.dropOffAddress}
                                     onChange={handleChange}
-                                    placeholder="Enter the drop-off address"
+                                    placeholder="Enter drop-off address"
                                     required
                                     className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                 />
