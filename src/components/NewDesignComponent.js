@@ -74,13 +74,15 @@ const NewDesignComponent = () => {
 
                 </div>
             </motion.div>
-            <motion.div className="flex-1 md:w-1/3 flex flex-col justify-center items-center" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                <h1 className="text-4xl font-bold mb-4 text-center">Enquire More</h1>
-                <p className="text-lg mb-4 text-center">
-                    Interested in learning more about our services? Contact us today to find out how we can make your travel experience unforgettable.
+            <motion.div className="bg-white flex-1 md:w-1/3 flex flex-col justify-center items-center" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
+                <br />
+                <h1 className="text-2xl font-bold mb-4 text-center text-[#000D28]">Enquire More</h1>
+                <p className="text-lg mb-4 text-center text-[#000D28]">
+                    Contact us today to find out how we can make your travel experience unforgettable.
                 </p>
-                <a href="https://wa.link/o58u2z" className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Book Now</a>
+                <a href="https://wa.link/o58u2z" className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Book Now</a><br />
             </motion.div>
+            <br />
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
