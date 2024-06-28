@@ -34,8 +34,7 @@ const NewService = () => {
             id="services"
         >
             <motion.h1 className="text-2xl font-bold mb-6 text-center text-[#000D28]" variants={fadeInUp}>Exceptional Landjet Services</motion.h1>
-            <motion.h2 className="text-2xl text-center text-[#000D28]">Quality and sophistication in every detail</motion.h2><br />
-            <motion.p className="text-center text-[#000D28]">At Exotic Wheels, we pride ourselves on delivering exceptional service. Our luxury landjets are equipped with the latest amenities to ensure a seamless and luxurious journey.</motion.p>
+            <motion.p className="text-center  text-[#000D28]">At Exotic Wheels, we pride ourselves on delivering exceptional service.</motion.p>
             <br />
             <motion.div className="flex flex-col items-center" variants={fadeInUp}>
                 <img src={air} alt="Service" className="w-full h-64 object-cover rounded-lg mb-4" />
