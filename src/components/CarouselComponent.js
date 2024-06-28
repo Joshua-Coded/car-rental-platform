@@ -43,7 +43,7 @@ const CarouselComponent = () => {
         >
             <motion.div className="bg-white p-4 rounded-lg text-white mb-6" variants={fadeInUp}>
                 <h1 className="text-2xl font-bold mb-4 text-center text-[#000D28]">Welcome to Exotic Wheels</h1>
-                <p className="text-center justify-center text-[#000D28]">
+                <p className="text-center text-justify text-[#000D28]">
                     Your premier provider for luxury landjet hire across the UK. Whether you're traveling for business or pleasure, our high-end fleet ensures a superior travel experience tailored to your needs.
                 </p>
             </motion.div>
