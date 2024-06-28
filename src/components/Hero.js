@@ -3,9 +3,8 @@ import { FaPlay } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeVideo from '../images/bgVideo.mp4';
 import localVideo from '../images/bgVideo2.mp4';
-import homeImage from '../images/image12.jpg';
+import homeImage from '../images/image31.jpeg';
 
 const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,7 +64,7 @@ const Hero = () => {
     return (
         <>
             <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
-                <video className="absolute w-full h-full object-cover hidden md:block" src={homeVideo} autoPlay loop muted />
+                <video className="absolute w-full h-full object-cover hidden md:block" src={localVideo} autoPlay loop muted />
                 <img src={homeImage} alt="Background" className="absolute w-full h-full object-cover md:hidden" />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <motion.div
@@ -85,7 +84,7 @@ const Hero = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div className="bg-[#000D28] text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                    <motion.div className=" text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
                         <h1 className="text-2xl font-bold mb-4 text-center">Enquire Now</h1>
                         <p className="mb-4 text-center">Experience luxury travel from £195.</p>
                         <form className="space-y-4" onSubmit={handleSubmit}>
