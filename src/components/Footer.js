@@ -5,11 +5,11 @@ import logo from '../images/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#470A1C] text-white py-6 px-6 pb-16 md:py-10">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <footer className="bg-[#470A1C] text-white py-4 px-4 md:py-10 md:px-6 pb-12 md:pb-16">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 <div className="text-center md:text-left">
-                    <img src={logo} alt="Company Logo" className="h-16 mx-auto md:mx-0" />
-                    <p className="mt-4">
+                    <img src={logo} alt="Company Logo" className="h-12 mx-auto md:mx-0" />
+                    <p className="mt-2 md:mt-4">
                         Travel in style and comfort
                     </p>
                 </div>
@@ -38,15 +38,16 @@ const Footer = () => {
                     <p className="mt-4">
                         &copy; {new Date().getFullYear()} Exotic Wheels<br />
                         All rights reserved.<br />
-                        Powered by CREIT TECHNOLOGIES LIMITED<br />
-                        Designed by Alivat Inc
+                        Designed and developed by CREIT DIGITALS
+
                     </p>
                 </div>
-                <div className="block md:hidden text-center">
-                    <p className="mt-4">
-                        &copy; {new Date().getFullYear()} Exotic Wheels<br />
-                        All rights reserved.<br />
+                <div className="block md:hidden text-center mt-2">
+                    <p className="mt-2">
+                        &copy; {new Date().getFullYear()} Exotic Wheels.
+                        All rights reserved.
                         Designed and developed by CREIT DIGITALS
+
                     </p>
                 </div>
             </div>
