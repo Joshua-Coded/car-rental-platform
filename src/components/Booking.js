@@ -58,25 +58,25 @@ const Booking = () => {
     };
 
     return (
-        <div className="bg-black relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
+        <div className="bg-[#fff] relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div
-                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12"
+                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
                 variants={staggerContainer}
             >
                 <motion.div className="max-w-lg space-y-6 text-center md:text-left" variants={fadeInUp}>
-                    <h1 className="text-2xl mt-10 md:text-5xl font-semibold">BOOK YOUR PRIVATE TRANSPORT</h1>
-                    <p className="text-md mt-10 md:text-lg">Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own.
+                    <h1 className="text-2xl mt-10 md:text-5xl font-semibold text-black">BOOK YOUR PRIVATE TRANSPORT</h1>
+                    <p className="text-md mt-10 md:text-lg text-black">Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own.
                         Fill in the form to get a quote and start your journey with Exotic Wheels.</p>
                 </motion.div>
-                <motion.div className="text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                <motion.div className="text-black p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="flex flex-col space-y-2">
                             <label className="block w-full">
-                                <span className="text-white">Full Name</span>
+                                <span className="text-black">Full Name</span>
                                 <input
                                     type="text"
                                     name="fullName"
@@ -88,7 +88,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-white">Journey Required</span>
+                                <span className="text-black">Journey Required</span>
                                 <select
                                     name="journeyRequired"
                                     value={formData.journeyRequired}
@@ -101,7 +101,7 @@ const Booking = () => {
                                 </select>
                             </label>
                             <label className="block w-full">
-                                <span className="text-white">Pick Up Date</span>
+                                <span className="text-black">Pick Up Date</span>
                                 <input
                                     type="date"
                                     name="pickUpDate"
@@ -113,7 +113,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-white">Pick Up Time</span>
+                                <span className="text-black">Pick Up Time</span>
                                 <input
                                     type="time"
                                     name="pickUpTime"
@@ -125,7 +125,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-white">Pick Up Address and Postcode</span>
+                                <span className="text-black">Pick Up Address and Postcode</span>
                                 <input
                                     type="text"
                                     name="pickUpAddress"
@@ -137,7 +137,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-white">Drop Off Address</span>
+                                <span className="text-black">Drop Off Address</span>
                                 <input
                                     type="text"
                                     name="dropOffAddress"
@@ -151,7 +151,6 @@ const Booking = () => {
                         </div>
                         <button type="submit" className="w-full bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
                     </form>
-
 
                     <p className="text-gray-500 text-xs mt-4 text-center">Your information will not be used by third-parties for marketing.</p>
                 </motion.div>
