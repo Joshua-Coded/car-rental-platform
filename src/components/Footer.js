@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                 <div className="text-center md:text-left">
                     <img src={logo} alt="Company Logo" className="h-12 mx-auto md:mx-0" />
-                    <p className="mt-2 md:mt-4">
+                    <p className="mt-1 md:mt-4">
                         Travel in style and comfort
                     </p>
                 </div>
@@ -39,14 +39,12 @@ const Footer = () => {
                         &copy; {new Date().getFullYear()} Exotic Wheels<br />
                         All rights reserved.<br />
                         Designed and developed by CREIT DIGITALS
-
                     </p>
                 </div>
-                <div className="block md:hidden text-center mt-2">
-                    <p className="mt-2">
-                        &copy; {new Date().getFullYear()} Exotic Wheels. All rights reserved.
-                        <br />Designed and developed by CREIT DIGITALS
-
+                <div className="block md:hidden text-center mt-1">
+                    <p className="mt-1">
+                        &copy; {new Date().getFullYear()} Exotic Wheels. All rights reserved.<br />
+                        Designed and developed by CREIT DIGITALS
                     </p>
                 </div>
             </div>
