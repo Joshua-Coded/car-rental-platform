@@ -44,9 +44,8 @@ const Footer = () => {
                 </div>
                 <div className="block md:hidden text-center mt-2">
                     <p className="mt-2">
-                        &copy; {new Date().getFullYear()} Exotic Wheels.
-                        All rights reserved.
-                        Designed and developed by CREIT DIGITALS
+                        &copy; {new Date().getFullYear()} Exotic Wheels. All rights reserved.
+                        <br />Designed and developed by CREIT DIGITALS
 
                     </p>
                 </div>
