@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaPlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Booking = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
         journeyRequired: 'One Way',
@@ -16,14 +14,6 @@ const Booking = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -61,7 +51,7 @@ const Booking = () => {
         <div className="bg-[#fff] relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div
-                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto  text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg"
+                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
@@ -69,14 +59,15 @@ const Booking = () => {
             >
                 <motion.div className="max-w-lg space-y-6 text-center md:text-left" variants={fadeInUp}>
                     <h1 className="text-lg mt-5 md:text-5xl font-semibold text-black">BOOK YOUR PRIVATE TRANSPORT</h1>
-                    <p className="text-md mt-5 md:text-lg text-black">Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own.
-                        Fill in the form to get a quote and start your journey with Exotic Wheels.</p>
+                    <p className="text-md mt-5 md:text-lg text-left text-black" style={{ textAlign: 'justify' }}>
+                        Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own. Fill in the form to get a quote and start your journey with Exotic Wheels.
+                    </p>
                 </motion.div>
-                <motion.div className="text-black p-4 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
-                    <form className="space-y-2" onSubmit={handleSubmit}>
+                <motion.div className="text-black bg-[#000D28] p-6 rounded-lg shadow-lg w-full max-w-sm space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="flex flex-col space-y-2">
                             <label className="block w-full">
-                                <span className="text-black">Full Name</span>
+                                <span className="text-white">Full Name</span>
                                 <input
                                     type="text"
                                     name="fullName"
@@ -88,7 +79,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-black">Journey Required</span>
+                                <span className="text-white">Journey Required</span>
                                 <select
                                     name="journeyRequired"
                                     value={formData.journeyRequired}
@@ -101,7 +92,7 @@ const Booking = () => {
                                 </select>
                             </label>
                             <label className="block w-full">
-                                <span className="text-black">Pick Up Date</span>
+                                <span className="text-white">Pick Up Date</span>
                                 <input
                                     type="date"
                                     name="pickUpDate"
@@ -113,7 +104,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-black">Pick Up Time</span>
+                                <span className="text-white">Pick Up Time</span>
                                 <input
                                     type="time"
                                     name="pickUpTime"
@@ -125,7 +116,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-black">Pick Up Address and Postcode</span>
+                                <span className="text-white">Pick Up Address and Postcode</span>
                                 <input
                                     type="text"
                                     name="pickUpAddress"
@@ -137,7 +128,7 @@ const Booking = () => {
                                 />
                             </label>
                             <label className="block w-full">
-                                <span className="text-black">Drop Off Address</span>
+                                <span className="text-white">Drop Off Address</span>
                                 <input
                                     type="text"
                                     name="dropOffAddress"
