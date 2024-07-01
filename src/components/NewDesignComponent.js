@@ -40,7 +40,7 @@ const NewDesignComponent = () => {
             >
                 <motion.div className="flex-1 bg-gray-900 p-6 rounded-lg" variants={fadeInUp}>
                     <div className="mb-8">
-                        <h1 className="text-3xl font-bold mb-4 text-center">Car Interior Features</h1>
+                        <h1 className="text-lg font-bold mb-4 text-center">Car Interior Features</h1>
                         <p className="text-lg mb-4 text-center">Discover the exceptional features of our luxury car interiors designed to provide the utmost comfort and convenience during your journey.</p>
                         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-2" variants={staggerContainer}>
                             <motion.div className="bg-[#fff] p-4 flex flex-col items-center w-full" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
@@ -86,9 +86,14 @@ const NewDesignComponent = () => {
             </motion.div>
 
             {/* Enquire More section outside the container, visible on mobile */}
-            <motion.div className="w-full bg-white flex flex-col justify-center items-center py-10 px-6 md:hidden" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                <h1 className="text-2xl font-bold mb-4 text-center text-[#000D28]">Enquire More</h1>
-                <p className="text-lg mb-4 text-center text-[#000D28]">
+            <motion.div
+                className="w-full bg-white flex flex-col justify-center items-center py-4 px-6 md:hidden"
+                variants={fadeInUp}
+                whileInView="visible"
+                viewport={{ once: false }}
+            >
+                <h1 className="text-lg font-bold  text-center text-[#000D28]">Enquire More</h1>
+                <p className="text-lg mb-2 py-1 text-center text-[#000D28]">
                     Contact us today to find out how we can make your travel experience unforgettable.
                 </p>
                 <a href="https://wa.link/o58u2z" className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Book Now</a>

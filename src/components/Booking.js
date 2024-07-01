@@ -61,19 +61,19 @@ const Booking = () => {
         <div className="bg-[#fff] relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div
-                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg"
+                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto  text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
                 variants={staggerContainer}
             >
                 <motion.div className="max-w-lg space-y-6 text-center md:text-left" variants={fadeInUp}>
-                    <h1 className="text-2xl mt-10 md:text-5xl font-semibold text-black">BOOK YOUR PRIVATE TRANSPORT</h1>
-                    <p className="text-md mt-10 md:text-lg text-black">Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own.
+                    <h1 className="text-lg mt-5 md:text-5xl font-semibold text-black">BOOK YOUR PRIVATE TRANSPORT</h1>
+                    <p className="text-md mt-5 md:text-lg text-black">Whether you are searching for a luxurious mobile office, a discreet family vehicle or a high-end chauffeur vehicle for Weddings, Corporate Events and other special occasions, you can trust Swift to deliver an impeccable VIP service that’s in a class of its own.
                         Fill in the form to get a quote and start your journey with Exotic Wheels.</p>
                 </motion.div>
-                <motion.div className="text-black p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
-                    <form className="space-y-4" onSubmit={handleSubmit}>
+                <motion.div className="text-black p-4 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                    <form className="space-y-2" onSubmit={handleSubmit}>
                         <div className="flex flex-col space-y-2">
                             <label className="block w-full">
                                 <span className="text-black">Full Name</span>

@@ -36,15 +36,15 @@ const Gallery = () => {
 
     return (
         <motion.div
-            className="bg-black text-white py-10 px-6"
+            className="bg-black text-white py-5 px-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
             variants={fadeInUp}
         >
-            <motion.h1 className="text-4xl font-bold mb-6 text-center" variants={fadeInUp}>Our Gallery</motion.h1>
-            <motion.p className="text-center text-lg mb-8" variants={fadeInUp}>
-                Take a look at our collection of luxurious travel experiences. Each image captures the essence of comfort and elegance.
+            <motion.h1 className="text-lg font-bold mb-2 text-center" variants={fadeInUp}>Our Gallery</motion.h1>
+            <motion.p className="text-center text-lg mb-4" variants={fadeInUp}>
+                Take a look at our collection of luxurious travel experiences. <br />Each image captures the essence of comfort and elegance.
             </motion.p>
             <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center" initial="hidden" whileInView="visible" viewport={{ once: false }}>
                 {images.map((image) => (

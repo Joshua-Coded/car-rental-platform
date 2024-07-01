@@ -35,19 +35,19 @@ const CarouselComponent = () => {
 
     return (
         <motion.div
-            className="w-full max-w-4xl mx-auto mb-6 mt-10"
+            className="w-full max-w-4xl mx-auto mb-4 mt-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
             variants={staggerContainer}
         >
-            <motion.div className="bg-white p-4 rounded-lg text-white mb-6" variants={fadeInUp}>
-                <h1 className="text-2xl font-bold mb-4 text-center text-[#000D28]">Welcome to Exotic Wheels</h1>
+            <motion.div className="bg-white p-2 rounded-lg text-white mb-2" variants={fadeInUp}>
+                <h1 className="text-lg font-bold mb-2 text-center text-[#000D28]">Welcome to Exotic Wheels</h1>
                 <p className="text-center text-[#000D28]">
                     Your premier provider for luxury landjet hire across the UK.
                 </p>
             </motion.div>
-            <motion.div className="bg-black p-4 rounded-lg" variants={fadeInUp}>
+            <motion.div className="bg-black p-2 rounded-lg" variants={fadeInUp}>
                 <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay>
                     <div className="h-60 md:h-80">
                         <img src={slide1} alt="Luxury Coach 1" className="object-cover h-full w-full" />

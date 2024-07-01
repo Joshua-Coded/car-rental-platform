@@ -29,7 +29,7 @@ const WhatYouCanExpect = () => {
 
             <motion.div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                 <motion.div className="flex-1 text-center md:text-left" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
-                    <motion.h2 className="text-1.8xl font-semibold mb-4" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>Features of Our Luxury Cars</motion.h2>
+                    <motion.h2 className="text-lg font-semibold mb-4" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>Features of Our Luxury Cars</motion.h2>
                     <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center" variants={staggerContainer}>
                         <motion.div className="bg-[#fff] p-4 rounded-lg shadow-md flex flex-col items-center w-full max-w-xs mx-auto" variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
                             <motion.div variants={fadeInUp} whileInView="visible" viewport={{ once: false }}>
