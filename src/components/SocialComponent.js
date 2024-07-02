@@ -11,9 +11,9 @@ const SocialComponent = () => {
                     href="https://linktr.ee/exoticwheels"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-navyblue py-2 px-4 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300"
+                    className="bg-[#000D28] text-[#fff]  py-2 px-4 rounded-lg hover:bg-[#fff] hover:text-[#000D28] transition duration-300"
                 >
-                    Visit Linktree
+                    Connect With Us!
                 </a>
             </div>
         </div>

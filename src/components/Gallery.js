@@ -91,10 +91,6 @@ const Gallery = () => {
             exit={{ opacity: 0 }}
         >
             <motion.h1 className="text-lg font-bold mb-2 text-center">Our Gallery</motion.h1>
-            <motion.p className="text-center text-lg mb-4">
-                Take a look at our collection of luxurious travel experiences. <br />Each image captures the essence of comfort and elegance.
-            </motion.p>
-
             <div className="hidden md:block">
                 <Slider {...carouselSettings}>
                     {initialImages.slice(0, visibleImages).map((image) => (

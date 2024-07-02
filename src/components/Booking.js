@@ -51,7 +51,7 @@ const Booking = () => {
         <div className="bg-[#fff] relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <motion.div
-                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto text-white space-y-6 md:space-y-0 md:space-x-12 bg-white rounded-lg shadow-lg p-6"
+                className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto text-white space-y-6 md:space-y-0 md:space-x-12 bg-white shadow-lg p-6"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
