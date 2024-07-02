@@ -15,6 +15,7 @@ import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
 import ComingSoonComponent from './ComingSoonComponent ';
+import SocialComponent from './SocialComponent';
 
 const Home = () => {
     const fadeInUp = {
@@ -71,6 +72,11 @@ const Home = () => {
             <Element name="gallery">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <Gallery />
+                </motion.div>
+            </Element>
+            <Element name="social-link">
+                <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+                    <SocialComponent />
                 </motion.div>
             </Element>
             <Element name="booking">
