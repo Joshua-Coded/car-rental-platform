@@ -14,6 +14,7 @@ import Gallery from './Gallery';
 import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
+import ComingSoonComponent from './ComingSoonComponent ';
 
 const Home = () => {
     const fadeInUp = {
@@ -60,6 +61,11 @@ const Home = () => {
             <Element name="newDesignComponent">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <NewDesignComponent />
+                </motion.div>
+            </Element>
+            <Element name="newDesignComponent">
+                <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+                    <ComingSoonComponent />
                 </motion.div>
             </Element>
             <Element name="gallery">
