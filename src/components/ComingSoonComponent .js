@@ -25,9 +25,9 @@ const ComingSoonComponent = () => {
 
 
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-4 md:mt-0 md:ml-8">
-                <h1 className="text-lg md:text-5xl font-bold mb-4">Exotic Aviation</h1>
-                <div className="flex items-center mb-4">
-                    <span className="text-lg md:text-3xl font-semibold">Coming Soon!</span>
+                <h1 className="text-lg text-center md:text-2xl font-bold mb-4">Exotic Aviation</h1>
+                <div className="flex items-center text-center mb-4">
+                    <span className="text-lg  md:text-xl font-semibold">Coming Soon!</span>
                     <div className="border-l-4 border-gray-300 h-20 mx-4"></div>
                 </div>
                 <p className="text-gray-700 text-justify leading-relaxed">

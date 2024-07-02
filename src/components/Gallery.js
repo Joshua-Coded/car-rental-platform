@@ -20,32 +20,32 @@ import aviation2 from '../images/aviation_2.JPG';
 
 const Gallery = () => {
     const initialImages = [
-        { id: 1, src: image30, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image21, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: image25, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: image22, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: image29, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 1, src: image23, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image24, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: image28, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: image31, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: image1, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: weddings, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: aviation1, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: aviation2, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 1, src: image30, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image21, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: image25, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: image22, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: image29, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 1, src: image23, alt: 'Exotic Wheels is your go-to provider for luxury landjet and vehicle hire in the UK.' },
-        { id: 2, src: image24, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: image28, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: image31, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: image1, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 3, src: weddings, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 4, src: aviation1, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
-        { id: 5, src: aviation2, alt: 'Our mission is to deliver unmatched comfort, style, and convenience. We aim to provide exceptional service with our state-of-the-art vehicles, equipped with the latest amenities and technology.' },
+        { id: 1, src: image30, },
+        { id: 2, src: image21, },
+        { id: 3, src: image25, },
+        { id: 4, src: image22, },
+        { id: 5, src: image29, },
+        { id: 1, src: image23, },
+        { id: 2, src: image24, },
+        { id: 3, src: image28, },
+        { id: 4, src: image31, },
+        { id: 5, src: image1, },
+        { id: 3, src: weddings, },
+        { id: 4, src: aviation1, },
+        { id: 5, src: aviation2, },
+        { id: 1, src: image30, },
+        { id: 2, src: image21, },
+        { id: 3, src: image25, },
+        { id: 4, src: image22, },
+        { id: 5, src: image29, },
+        { id: 1, src: image23, },
+        { id: 2, src: image24, },
+        { id: 3, src: image28, },
+        { id: 4, src: image31, },
+        { id: 5, src: image1, },
+        { id: 3, src: weddings, },
+        { id: 4, src: aviation1, },
+        { id: 5, src: aviation2, },
 
     ];
 
@@ -110,8 +110,7 @@ const Gallery = () => {
                     <div key={image.id} className="relative cursor-pointer">
                         <img src={image.src} alt={image.alt} className="w-full" onClick={() => openLightbox(image)} />
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-lg text-white mb-2">{image.alt}</p>
-                            <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Click Me</button>
+
                         </div>
                     </div>
                 ))}
