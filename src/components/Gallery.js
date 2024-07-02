@@ -95,7 +95,7 @@ const Gallery = () => {
                 <Slider {...carouselSettings}>
                     {initialImages.slice(0, visibleImages).map((image) => (
                         <div key={image.id} className="relative cursor-pointer">
-                            <img src={image.src} alt={image.alt} className="w-full rounded-lg" onClick={() => openLightbox(image)} />
+                            <img src={image.src} alt={image.alt} className="w-full" onClick={() => openLightbox(image)} />
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                                 <p className="text-lg text-white mb-2">{image.alt}</p>
                                 <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Click Me</button>
@@ -108,7 +108,7 @@ const Gallery = () => {
             <div className="md:hidden grid grid-cols-1 gap-4">
                 {initialImages.slice(0, visibleImages).map((image) => (
                     <div key={image.id} className="relative cursor-pointer">
-                        <img src={image.src} alt={image.alt} className="w-full rounded-lg" onClick={() => openLightbox(image)} />
+                        <img src={image.src} alt={image.alt} className="w-full" onClick={() => openLightbox(image)} />
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                             <p className="text-lg text-white mb-2">{image.alt}</p>
                             <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Click Me</button>
@@ -119,7 +119,7 @@ const Gallery = () => {
 
             {visibleImages < initialImages.length && (
                 <div className="text-center mt-4">
-                    <button className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900" onClick={handleSeeMore}>See More</button>
+                    <button className="bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-gray-900" onClick={handleSeeMore}>See More</button>
                 </div>
             )}
 
