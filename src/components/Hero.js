@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { FaPlay } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // Import Link for navigation
 import { motion } from 'framer-motion';
+import { FaPlay } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll'; // Import ScrollLink for smooth scrolling
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import localVideo from '../images/bgVideo2.mp4';
 import homeImage from '../images/image31.jpeg';
@@ -63,7 +63,7 @@ const Hero = () => {
 
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
+            <div id="hero" className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
                 <video className="absolute w-full h-full object-cover hidden md:block" src={localVideo} autoPlay loop muted />
                 <img src={homeImage} alt="Background" className="absolute w-full h-full object-cover md:hidden" />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -78,7 +78,7 @@ const Hero = () => {
                         <h1 className="text-4xl mt-10 md:text-5xl font-semibold">Luxury Landjet Hire in the UK.</h1>
                         <p className="text-md mt-10 md:text-lg">Experience unmatched comfort, style, and convenience with Exotic Wheels</p>
                         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                            <Link to="/#services" className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</Link>
+                            <ScrollLink to="services" spy={true} smooth={true} duration={500} className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</ScrollLink>
                             <button onClick={openModal} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center">
                                 <FaPlay className="mr-2" /> Watch Now
                             </button>
@@ -165,9 +165,6 @@ const Hero = () => {
                             </div>
                             <button type="submit" className="w-full bg-[#470A1C] text-white px-4 py-2 rounded hover:bg-red-700">Confirm Journey</button>
                         </form>
-
-
-
                         <p className="text-gray-500 text-xs mt-4 text-center">Your information will not be used by third-parties for marketing.</p>
                     </motion.div>
                 </motion.div>

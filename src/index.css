@@ -100,3 +100,79 @@ select {
 input::placeholder {
     color: black;
 }
+
+/* index.css */
+/* .menu-item {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu-item.show {
+    opacity: 1;
+    transform: translateX(0);
+} */
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.menu-slide-in {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+.menu-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.menu-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.menu-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.menu-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.menu-item:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.menu-item:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.menu-item:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.menu-item:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

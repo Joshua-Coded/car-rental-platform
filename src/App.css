@@ -109,3 +109,17 @@ input::placeholder {
   font-size: 2rem;
   cursor: pointer;
 }
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}

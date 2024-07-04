@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import logo from "../images/logo.png";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,20 +41,15 @@ const Header = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <div className="hidden md:flex md:space-x-8 text-lg">
-                    <Link to="/" className="text-white hover:text-gray-300 cursor-pointer">Business</Link>
-                    <Link to="/weddings" className="text-white hover:text-gray-300 cursor-pointer">Weddings</Link>
-                    <Link to="/services" className="text-white hover:text-gray-300 cursor-pointer">Services</Link>
-                </div>
             </div>
             <div className="flex-shrink-0 mx-4">
-                <img src={logo} alt="Company Logo" className="h-12" />
+                <img src={logo} alt="Company Logo" className="h-12" /> {/* Assuming 'logo' is defined elsewhere */}
             </div>
             <div className="hidden md:block text-right">
-                <button className="bg-[#000D28] px-6 py-3 rounded-full w-50 h-50 hover:bg-red-700 text-lg cursor-pointer">Enquire</button>
+                <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={toggleMenu}>Book Now</ScrollLink>
             </div>
             {isOpen && (
-                <div className="fixed inset-0 bg-[#470A1C]  text-white flex flex-col items-center justify-center z-50">
+                <div className="fixed inset-0 bg-[#470A1C] text-white flex flex-col items-center justify-center z-50">
                     <button
                         className="absolute top-4 right-4 focus:outline-none cursor-pointer"
                         onClick={toggleMenu}
@@ -60,14 +57,14 @@ const Header = () => {
                         <FontAwesomeIcon icon={faTimes} className="w-6 h-6 text-white" />
                     </button>
                     <nav className="flex flex-col space-y-6 text-center text-2xl">
-                        <Link to="/" className="hover:text-gray-300 cursor-pointer">Business</Link>
-                        <Link to="/services" className="hover:text-gray-300 cursor-pointer">Our Services</Link>
-                        <Link to="/weddings" className="hover:text-gray-300 cursor-pointer">Weddings</Link>
-                        <Link to="/airport-transfers" className="hover:text-gray-300 cursor-pointer">Airport Transfers</Link>
-                        <Link to="/special-events" className="hover:text-gray-300 cursor-pointer">Special Events</Link>
-                        <Link to="/customizable-packages" className="hover:text-gray-300 cursor-pointer">Customized Packages</Link>
-                        <Link to="/safety-and-comfort" className="hover:text-gray-300 cursor-pointer">Safety And Comfort</Link>
-
+                        <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Home</ScrollLink>
+                        <ScrollLink to="newService" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Our Services</ScrollLink>
+                        <ScrollLink to="whatYouCanExpect" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Features</ScrollLink>
+                        <Link to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Weddings</Link>
+                        <Link to="/business" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Business</Link>
+                        <ScrollLink to="gallery" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Gallery</ScrollLink>
+                        <ScrollLink to="newDesignComponent" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Aviation</ScrollLink>
+                        <ScrollLink to="booking" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Book Now</ScrollLink>
                     </nav>
                 </div>
             )}

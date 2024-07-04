@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import image1 from '../images/aviation_2.JPG';
 import image2 from '../images/aviation_1.JPG';
 
@@ -7,7 +8,7 @@ const ComingSoonComponent = () => {
     console.log('Image 2:', image2);
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 bg-white py-2 md:py-0 md:mt-0 md:mb-0">
+        <div id="aviation-section" className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 bg-white py-2 md:py-0 md:mt-0 md:mb-0">
             {/* Image Section */}
             <div className="relative w-full md:w-1/2 h-100vh md:h-full overflow-hidden">
                 <img src={image1} alt="Background Image" className="w-full h-full object-cover rounded-md shadow-md" />
@@ -22,7 +23,6 @@ const ComingSoonComponent = () => {
                     }}
                 />
             </div>
-
 
             <div className="w-full md:w-1/2 flex flex-col items-center mt-4 md:mt-0 md:ml-8">
                 <h1 className="text-lg text-center md:text-2xl font-bold mb-4">Exotic Aviation</h1>
