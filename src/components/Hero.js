@@ -84,7 +84,7 @@ const Hero = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div className=" text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                    <motion.div id="booking" className=" text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
                         <h1 className="text-2xl font-bold mb-4 text-center">Book Now</h1>
                         <p className="mb-4 text-center">Experience luxury travel from £195.</p>
                         <form className="space-y-4" onSubmit={handleSubmit}>
