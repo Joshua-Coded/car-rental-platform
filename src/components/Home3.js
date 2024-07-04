@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Header from './Header';
-import HeroWeddings from './Hero';
+import HeroWeddings from './HeroWeddings';
 import CarouselComponentWeddings from './CarouselComponent';
 import WhatWeDoWeddings from './WhatWeDo';
 import WhatYouCanExpect from './WhatYouCanExpect';

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Header from './Header';
-import HeroServices from './Hero';
+import HeroBusiness from './HeroBusiness';
 import CarouselComponent from './CarouselComponent';
 import WhatWeDo from './WhatWeDo';
 import WhatYouCanExpect from './WhatYouCanExpect';
@@ -16,11 +16,6 @@ import Booking from './Booking';
 import NewService from './NewService';
 
 const Home2 = () => {
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
-    };
-
     const staggerContainer = {
         hidden: { opacity: 1 },
         visible: {
@@ -35,7 +30,7 @@ const Home2 = () => {
         <div>
             <Header />
             <Element name="hero">
-                <HeroServices />
+                <HeroBusiness />
             </Element>
             <Element name="carouselComponent">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>

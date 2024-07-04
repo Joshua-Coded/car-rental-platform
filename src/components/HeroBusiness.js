@@ -5,7 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import homeVideo from '../images/bgVideo.mp4';
 import localVideo from '../images/bgVideo2.mp4';
 
-const HeroAirportTransfers = () => {
+const HeroBusiness = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
@@ -15,9 +15,20 @@ const HeroAirportTransfers = () => {
         pickUpAddress: '',
         dropOffAddress: ''
     });
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const openModal = () => {
@@ -63,7 +74,7 @@ const HeroAirportTransfers = () => {
     return (
         <>
             <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
-                <video className="absolute w-full h-full object-cover" src={homeVideo} autoPlay loop muted />
+                <video className="absolute w-full h-full object-cover" src={isDesktop ? homeVideo : localVideo} autoPlay loop muted />
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <motion.div
                     className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12"
@@ -73,8 +84,8 @@ const HeroAirportTransfers = () => {
                     variants={staggerContainer}
                 >
                     <motion.div className="max-w-lg space-y-6 text-center md:text-left" variants={fadeInUp}>
-                        <h1 className="text-2xl mt-10 md:text-5xl font-semibold">Luxury Landjet Airport Transfers in the UK.</h1>
-                        <p className="text-md mt-10 md:text-lg">Experience hassle-free airport transfers with Exotic Wheels. Our landjets provide a luxurious transition from land to air travel.s</p>
+                        <h1 className="text-2xl mt-10 md:text-5xl font-semibold">Luxury Landjet Corporate Travel, Done Differently..</h1>
+                        <p className="text-md mt-10 md:text-lg">We’re a VIP Private Chauffeur company supplying the pinnacle of corporate business travel. Whether you're bringing key clients to you or making your way to them, we're here to make your business journey a first-class experience from the first pick-up.</p>
                         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
                             <button className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</button>
                             <button onClick={openModal} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center">
@@ -95,6 +106,8 @@ const HeroAirportTransfers = () => {
                                         value={formData.fullName}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Full Name"
+                                        required
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -104,6 +117,7 @@ const HeroAirportTransfers = () => {
                                         value={formData.journeyRequired}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Journey Required"
                                     >
                                         <option>One Way</option>
                                         <option>Return</option>
@@ -117,6 +131,8 @@ const HeroAirportTransfers = () => {
                                         value={formData.pickUpDate}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Pick Up Date"
+                                        required
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -127,6 +143,8 @@ const HeroAirportTransfers = () => {
                                         value={formData.pickUpTime}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Pick Up Time"
+                                        required
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -137,6 +155,8 @@ const HeroAirportTransfers = () => {
                                         value={formData.pickUpAddress}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Pick Up Address"
+                                        required
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -147,6 +167,8 @@ const HeroAirportTransfers = () => {
                                         value={formData.dropOffAddress}
                                         onChange={handleChange}
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        aria-label="Drop Off Address"
+                                        required
                                     />
                                 </label>
                             </div>
@@ -171,4 +193,4 @@ const HeroAirportTransfers = () => {
     );
 };
 
-export default HeroAirportTransfers;
+export default HeroBusiness;

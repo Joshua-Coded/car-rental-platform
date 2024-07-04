@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import homeVideo from '../images/bgVideo.mp4';
 import localVideo from '../images/bgVideo2.mp4';
+import weddingBackground from '../images/weddings.jpg';
 
 const HeroWeddings = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,10 +61,17 @@ const HeroWeddings = () => {
         }
     };
 
+    // Determine screen width to conditionally render background video or image
+    const isDesktop = window.innerWidth > 768; // Example breakpoint for desktop
+
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
-                <video className="absolute w-full h-full object-cover" src={homeVideo} autoPlay loop muted />
+            <div className="relative">
+                {isDesktop ? (
+                    <video className="absolute w-full h-full object-cover" src={homeVideo} autoPlay loop muted />
+                ) : (
+                    <img src={weddingBackground} alt="Wedding Background" className="absolute inset-0 w-full h-full object-cover" />
+                )}
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <motion.div
                     className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12"

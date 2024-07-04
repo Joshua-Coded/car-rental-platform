@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link as ScrollLink } from 'react-scroll'; // Import ScrollLink from react-scroll
+import { Link as ScrollLink } from 'react-scroll';
 import airport from '../images/airport.JPG';
 import air from '../images/air.JPG';
-import weddings from '../images/weddings.JPG';
+import weddings from '../images/weddings.jpg';
 import serviceImage3 from '../images/image29.jpg';
 import serviceImage4 from '../images/image22.jpg';
 import serviceImage5 from '../images/image30.jpg';

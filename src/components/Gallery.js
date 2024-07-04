@@ -14,7 +14,7 @@ import image23 from '../images/image23.jpg';
 import image24 from '../images/image24.jpg';
 import image28 from '../images/image28.jpg';
 import image31 from '../images/image31.jpeg';
-import weddings from '../images/weddings.JPG';
+import weddings from '../images/weddings.jpg';
 import aviation1 from '../images/aviation_1.JPG';
 import aviation2 from '../images/aviation_2.JPG';
 
