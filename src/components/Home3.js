@@ -82,7 +82,7 @@ const Home3 = () => {
                 </Link>
                 <Link to="carouselComponent" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
                     <FontAwesomeIcon icon={faInfoCircle} size="lg" className="text-[#fff]" />
-                    <span className="text-xs text-[#fff]">Carousel</span>
+                    <span className="text-xs text-[#fff]">Exotic View</span>
                 </Link>
                 <Link to="newService" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
                     <FontAwesomeIcon icon={faConciergeBell} size="lg" className="text-[#fff]" />

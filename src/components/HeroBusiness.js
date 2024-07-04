@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FaPlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeVideo from '../images/bgVideo.mp4';
 import localVideo from '../images/bgVideo2.mp4';
+import bgImage from '../images/air.JPG';
 
 const HeroBusiness = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,9 +15,11 @@ const HeroBusiness = () => {
         pickUpAddress: '',
         dropOffAddress: ''
     });
+
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
     useEffect(() => {
+        // Scroll to the top when the component mounts
         window.scrollTo(0, 0);
 
         const handleResize = () => {
@@ -73,8 +75,7 @@ const HeroBusiness = () => {
 
     return (
         <>
-            <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center">
-                <video className="absolute w-full h-full object-cover" src={isDesktop ? homeVideo : localVideo} autoPlay loop muted />
+            <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: `url(${bgImage})` }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <motion.div
                     className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 py-12 text-white space-y-6 md:space-y-0 md:space-x-12"
@@ -93,8 +94,8 @@ const HeroBusiness = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div className="bg-[#000D28] text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
-                        <h1 className="text-2xl font-bold mb-4 text-center">Enquire Now</h1>
+                    <motion.div id="booking" className=" text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                        <h1 className="text-2xl font-bold mb-4 text-center">Book Now</h1>
                         <p className="mb-4 text-center">Experience luxury travel from £195.</p>
                         <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="flex flex-col space-y-2">
@@ -105,9 +106,9 @@ const HeroBusiness = () => {
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleChange}
-                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Full Name"
+                                        placeholder="Enter your full name"
                                         required
+                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -116,8 +117,8 @@ const HeroBusiness = () => {
                                         name="journeyRequired"
                                         value={formData.journeyRequired}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Journey Required"
                                     >
                                         <option>One Way</option>
                                         <option>Return</option>
@@ -130,9 +131,9 @@ const HeroBusiness = () => {
                                         name="pickUpDate"
                                         value={formData.pickUpDate}
                                         onChange={handleChange}
-                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Pick Up Date"
                                         required
+                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -142,9 +143,9 @@ const HeroBusiness = () => {
                                         name="pickUpTime"
                                         value={formData.pickUpTime}
                                         onChange={handleChange}
-                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Pick Up Time"
                                         required
+                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -154,9 +155,9 @@ const HeroBusiness = () => {
                                         name="pickUpAddress"
                                         value={formData.pickUpAddress}
                                         onChange={handleChange}
-                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Pick Up Address"
+                                        placeholder="Enter pick-up address and postcode"
                                         required
+                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -166,9 +167,9 @@ const HeroBusiness = () => {
                                         name="dropOffAddress"
                                         value={formData.dropOffAddress}
                                         onChange={handleChange}
-                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                        aria-label="Drop Off Address"
+                                        placeholder="Enter drop-off address"
                                         required
+                                        className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
                             </div>
@@ -178,14 +179,18 @@ const HeroBusiness = () => {
                     </motion.div>
                 </motion.div>
             </div>
+
             {isModalOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-                    <div className="relative w-full max-w-4xl p-6">
-                        <button className="absolute top-4 right-4 text-white text-2xl" onClick={closeModal}>X</button>
-                        <video className="w-full h-96 rounded-lg" controls autoPlay>
-                            <source src={localVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div className="absolute inset-0 bg-black opacity-75"></div>
+                    <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+                        <button
+                            className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+                            onClick={closeModal}
+                        >
+                            X
+                        </button>
+                        <video className="w-full h-auto" src={localVideo} controls />
                     </div>
                 </div>
             )}

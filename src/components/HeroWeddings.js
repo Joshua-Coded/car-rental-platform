@@ -90,8 +90,8 @@ const HeroWeddings = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div className="bg-[#000D28] text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
-                        <h1 className="text-2xl font-bold mb-4 text-center">Enquire Now</h1>
+                    <motion.div id="booking" className=" text-white p-8 rounded-lg shadow-lg w-full max-w-lg space-y-4 md:ml-12 mt-8 md:mt-0" variants={fadeInUp}>
+                        <h1 className="text-2xl font-bold mb-4 text-center">Book Now</h1>
                         <p className="mb-4 text-center">Experience luxury travel from £195.</p>
                         <form className="space-y-4" onSubmit={handleSubmit}>
                             <div className="flex flex-col space-y-2">
@@ -102,6 +102,8 @@ const HeroWeddings = () => {
                                         name="fullName"
                                         value={formData.fullName}
                                         onChange={handleChange}
+                                        placeholder="Enter your full name"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
@@ -111,6 +113,7 @@ const HeroWeddings = () => {
                                         name="journeyRequired"
                                         value={formData.journeyRequired}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     >
                                         <option>One Way</option>
@@ -124,7 +127,9 @@ const HeroWeddings = () => {
                                         name="pickUpDate"
                                         value={formData.pickUpDate}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -134,7 +139,9 @@ const HeroWeddings = () => {
                                         name="pickUpTime"
                                         value={formData.pickUpTime}
                                         onChange={handleChange}
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        style={{ appearance: 'none' }} // Added to fix the appearance on iPhones
                                     />
                                 </label>
                                 <label className="block w-full">
@@ -144,6 +151,8 @@ const HeroWeddings = () => {
                                         name="pickUpAddress"
                                         value={formData.pickUpAddress}
                                         onChange={handleChange}
+                                        placeholder="Enter pick-up address and postcode"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
@@ -154,6 +163,8 @@ const HeroWeddings = () => {
                                         name="dropOffAddress"
                                         value={formData.dropOffAddress}
                                         onChange={handleChange}
+                                        placeholder="Enter drop-off address"
+                                        required
                                         className="mt-1 block w-full text-black rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                     />
                                 </label>
