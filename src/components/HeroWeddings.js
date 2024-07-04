@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import homeVideo from '../images/bgVideo.mp4';
 import localVideo from '../images/bgVideo2.mp4';
-import weddingBackground from '../images/Weddings.JPG';
+import weddingBackground from '../images/wed.JPG';
 
 const HeroWeddings = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
