@@ -69,7 +69,7 @@ const HeroWeddings = () => {
         <>
             <div className="relative">
                 {isDesktop ? (
-                    <video className="absolute w-full h-full object-cover" src={homeVideo} autoPlay loop muted />
+                    <img src={weddingBackground} alt="Wedding Background" className="absolute inset-0 w-full h-full object-cover" />
                 ) : (
                     <img src={weddingBackground} alt="Wedding Background" className="absolute inset-0 w-full h-full object-cover" />
                 )}
