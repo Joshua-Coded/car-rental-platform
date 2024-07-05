@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaPlay } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll'; // Import Link for smooth scrolling
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import localVideo from '../images/bgVideo2.mp4';
 import bgImage from '../images/air.JPG';
@@ -88,7 +89,7 @@ const HeroBusiness = () => {
                         <h1 className="text-2xl mt-10 md:text-5xl font-semibold">Luxury Landjet Corporate Travel, Done Differently..</h1>
                         <p className="text-md mt-10 md:text-lg">We’re a VIP Private Chauffeur company supplying the pinnacle of corporate business travel. Whether you're bringing key clients to you or making your way to them, we're here to make your business journey a first-class experience from the first pick-up.</p>
                         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
-                            <button className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700">View Services</button>
+                            <Link to="newService" spy={true} smooth={true} duration={500} className="bg-[#470A1C] px-4 py-2 rounded hover:bg-red-700 cursor-pointer">View Services</Link>
                             <button onClick={openModal} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center">
                                 <FaPlay className="mr-2" /> Watch Now
                             </button>
