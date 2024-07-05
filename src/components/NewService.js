@@ -41,7 +41,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Business Travel Services</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>Optimize your business travel with our high-end landjets, offering the perfect environment for productivity and relaxation.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
@@ -50,7 +50,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Wedding Services</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>Make your special day unforgettable by arriving in style with our luxury landjets. <br />Our team ensures a seamless experience from start to finish.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
@@ -59,7 +59,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Airport Transfers</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>Experience hassle-free airport transfers with Exotic Wheels. <br />Our landjets provide a luxurious transition from land to air travel.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
@@ -68,7 +68,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Special Events</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>Whether it's a corporate event or a personal celebration, our landjets add a touch of luxury to any occasion.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
@@ -77,7 +77,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Customizable Packages</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>We offer customizable packages to meet your specific needs. <br /> Contact us to create the perfect travel experience.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
@@ -86,7 +86,7 @@ const NewService = () => {
                 <motion.h3 className='text-1.8xl text-left mb-2 font-bold text-[#000D28]' variants={fadeInUp}>Safety and Comfort</motion.h3>
                 <motion.p className='text-black text-left mb-4' variants={fadeInUp}>Our landjets are maintained to the highest standards, ensuring both safety and comfort for our clients.</motion.p>
                 <ScrollLink to="booking" spy={true} smooth={true} duration={500}>
-                    <button className="bg-[#470A1C] text-left text-white px-2 py-1 rounded hover:bg-red-700">Book</button>
+                    <button className="bg-[#470A1C] text-left text-white px-4 py-2 rounded hover:bg-red-700">Book</button>
                 </ScrollLink>
             </motion.div>
             <br />
