@@ -1,18 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import Business from './pages/Business';
+import Home2 from './components/Home2';
 import Weddings from './pages/Weddings';
-import './index.css';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/business" element={<Business />} />
-        <Route path="/weddings" element={<Weddings />} />
-      </Routes>
+      <Switch>
+        <Route path="/weddings" component={Weddings} />
+        <Route path="/business" component={Home2} />
+        <Route path="/" component={Home} />
+      </Switch>
     </Router>
   );
 }

@@ -14,15 +14,10 @@ import Gallery from './Gallery';
 import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
-import ComingSoonComponent from './ComingSoonComponent ';
+import ComingSoonComponent from './ComingSoonComponent';
 import SocialComponent from './SocialComponent';
 
 const Home = () => {
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
-    };
-
     const staggerContainer = {
         hidden: { opacity: 1 },
         visible: {

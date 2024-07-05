@@ -14,8 +14,9 @@ import Gallery from './Gallery';
 import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
+import Homenavlink from '../components/HomeNavLink';
 
-const Home2 = () => {
+const Home2 = ({ userType }) => {
     const staggerContainer = {
         hidden: { opacity: 1 },
         visible: {
@@ -25,6 +26,8 @@ const Home2 = () => {
             }
         }
     };
+
+    const isBusinessUser = userType === 'business';
 
     return (
         <div>
@@ -70,6 +73,8 @@ const Home2 = () => {
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                 <Footer />
             </motion.div>
+            {/* Render Homenavlink only for business users */}
+            {isBusinessUser && <Homenavlink />}
             <div className="fixed bottom-0 w-full bg-black text-white flex justify-around py-2 md:hidden z-50">
                 <Link to="hero" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
                     <FontAwesomeIcon icon={faHome} size="lg" className="text-[#fff]" />
