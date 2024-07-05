@@ -47,12 +47,23 @@ const Header = () => {
                     </svg>
                 </button>
             </div>
-            <div className="flex-shrink-0 mx-4">
-                <img src={logo} alt="Company Logo" className="h-12" />
+            <div className="hidden md:flex items-center space-x-6 flex-grow">
+                <Link to="/" className="hover:text-gray-300 cursor-pointer">
+                    Services
+                </Link>
+                <Link to="/business" className="hover:text-gray-300 cursor-pointer">
+                    Business
+                </Link>
+                <Link to="/weddings" className="hover:text-gray-300 cursor-pointer">
+                    Weddings
+                </Link>
             </div>
-            <div className="hidden md:block text-right">
-                <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={toggleMenu}>
-                    Book Now
+            <div className="flex-shrink-0 mx-4">
+                <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
+            </div>
+            <div className="hidden md:flex items-center flex-grow justify-end">
+                <ScrollLink to="booking" spy={true} smooth={true} duration={500} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center">
+                    Enquire Now
                 </ScrollLink>
             </div>
             {isOpen && (
@@ -79,28 +90,44 @@ const Header = () => {
                             <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
                         </div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Home</ScrollLink>
+                            <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Home
+                            </ScrollLink>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="newService" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Our Services</ScrollLink>
+                            <ScrollLink to="newService" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Our Services
+                            </ScrollLink>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="whatYouCanExpect" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Features</ScrollLink>
+                            <ScrollLink to="whatYouCanExpect" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Features
+                            </ScrollLink>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <Link to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Weddings</Link>
+                            <Link to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Weddings
+                            </Link>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <Link to="/business" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Business</Link>
+                            <Link to="/business" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Business
+                            </Link>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="gallery" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Gallery</ScrollLink>
+                            <ScrollLink to="gallery" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Gallery
+                            </ScrollLink>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="newDesignComponent" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Aviation</ScrollLink>
+                            <ScrollLink to="newDesignComponent" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Aviation
+                            </ScrollLink>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <ScrollLink to="booking" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Book Now</ScrollLink>
+                            <ScrollLink to="booking" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>
+                                Enquire Now
+                            </ScrollLink>
                         </motion.div>
                     </motion.nav>
                 </div>
