@@ -85,15 +85,15 @@ const Header = () => {
                 <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
                 <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
                 <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
+                <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={() => setIsOpen(false)}>
                     Weddings
                 </RouterLink>
-                <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
+                <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer" onClick={() => setIsOpen(false)}>
                     Business
                 </RouterLink>
                 <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
-                <button onClick={() => handleNavigation('newDesignComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
-                <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book</button>
+                <button onClick={() => handleNavigation('ComingSoonComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
+                <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book Now</button>
             </div>
             <div className="flex-shrink-0 mx-4">
                 <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
@@ -129,10 +129,10 @@ const Header = () => {
                         <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
                         <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
                         <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                        <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
+                        <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={() => setIsOpen(false)}>
                             Weddings
                         </RouterLink>
-                        <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
+                        <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer" onClick={() => setIsOpen(false)}>
                             Business
                         </RouterLink>
                         <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
