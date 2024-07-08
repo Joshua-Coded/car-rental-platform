@@ -1,37 +1,36 @@
 import React from 'react';
-// import { Link, Element } from 'react-scroll';
-// import { motion } from 'framer-motion';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
-// import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { Link, Element } from 'react-scroll';
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faInfoCircle, faConciergeBell, faImage, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Header from './Header';
-// import Hero from './Hero';
-// import CarouselComponent from './CarouselComponent';
-// import WhatWeDo from './WhatWeDo';
-// import WhatYouCanExpect from './WhatYouCanExpect';
-// import NewDesignComponent from './NewDesignComponent';
-// import Gallery from './Gallery';
-// import Footer from './Footer';
-// import Booking from './Booking';
-// import NewService from './NewService';
-// import ComingSoonComponent from './ComingSoonComponent';
-// import SocialComponent from './SocialComponent';
-
+import Hero from './Hero';
+import CarouselComponent from './CarouselComponent';
+import WhatWeDo from './WhatWeDo';
+import WhatYouCanExpect from './WhatYouCanExpect';
+import NewDesignComponent from './NewDesignComponent';
+import Gallery from './Gallery';
+import Footer from './Footer';
+import Booking from './Booking';
+import NewService from './NewService';
+import SocialComponent from './SocialComponent';
+import ComingSoonComponent from './ComingSoonComponent ';
 const Home = () => {
-    // const staggerContainer = {
-    //     hidden: { opacity: 1 },
-    //     visible: {
-    //         opacity: 1,
-    //         transition: {
-    //             staggerChildren: 0.2
-    //         }
-    //     }
-    // };
+    const staggerContainer = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
 
     return (
         <div>
             <Header />
-            {/* <Element name="hero">
+            <Element name="hero">
                 <Hero />
             </Element>
             <Element name="carouselComponent">
@@ -58,13 +57,13 @@ const Home = () => {
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <NewDesignComponent />
                 </motion.div>
-            </Element> */}
-            {/* <Element name="ComingSoonComponent">
+            </Element>
+            <Element name="ComingSoonComponent">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <ComingSoonComponent />
                 </motion.div>
-            </Element> */}
-            {/* <Element name="gallery">
+            </Element>
+            <Element name="gallery">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <Gallery />
                 </motion.div>
@@ -107,7 +106,7 @@ const Home = () => {
                 <a href="https://wa.me/+447438969564" target="_blank" rel="noopener noreferrer" className="bg-[#470A1C] p-3 rounded-full shadow-lg cursor-pointer">
                     <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-white" />
                 </a>
-            </div> */}
+            </div>
         </div>
     );
 };
