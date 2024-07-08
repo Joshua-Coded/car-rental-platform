@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Link as RouterLink } from 'react-router-dom';
-import HomeNavLink from './HomeNavLink';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import logo from "../images/logo.png";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -30,6 +32,11 @@ const Header = () => {
         };
     }, []);
 
+    const linkVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <header className={`sticky top-0 flex justify-between items-center p-6 ${scrolled ? 'bg-[#470A1C] text-white' : 'bg-black text-white'} z-50 h-20 transition-colors duration-300`}>
             <div className="flex items-center space-x-4">
@@ -42,27 +49,13 @@ const Header = () => {
                     </svg>
                 </button>
             </div>
-            <div className="hidden md:flex items-center space-x-6 flex-grow">
-                <HomeNavLink section="hero" text="Home" />
-                <HomeNavLink section="newService" text="Our Services" />
-                <HomeNavLink section="whatYouCanExpect" text="Features" />
-                <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
-                    Weddings
-                </RouterLink>
-                <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
-                    Business
-                </RouterLink>
-                <HomeNavLink section="gallery" text="Gallery" />
-                <HomeNavLink section="newDesignComponent" text="Aviation" />
-                <HomeNavLink section="booking" text="Enquire Now" />
-            </div>
             <div className="flex-shrink-0 mx-4">
                 <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
             </div>
-            <div className="hidden md:flex items-center flex-grow justify-end">
-                <button className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    Book
-                </button>
+            <div className="hidden md:block text-right">
+                <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={toggleMenu}>
+                    Book Now
+                </ScrollLink>
             </div>
             {isOpen && (
                 <div className="fixed inset-0 bg-[#470A1C] text-white flex flex-col items-center justify-center z-50">
@@ -87,18 +80,30 @@ const Header = () => {
                         <div className="mb-4">
                             <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
                         </div>
-                        <HomeNavLink section="hero" text="Home" />
-                        <HomeNavLink section="newService" text="Our Services" />
-                        <HomeNavLink section="whatYouCanExpect" text="Features" />
-                        <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
-                            Weddings
-                        </RouterLink>
-                        <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
-                            Business
-                        </RouterLink>
-                        <HomeNavLink section="gallery" text="Gallery" />
-                        <HomeNavLink section="newDesignComponent" text="Aviation" />
-                        <HomeNavLink section="booking" text="Enquire Now" />
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="hero" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Home</ScrollLink>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="newService" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Our Services</ScrollLink>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="whatYouCanExpect" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Features</ScrollLink>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <Link to="/weddings" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Weddings</Link>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <Link to="/business" className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Business</Link>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="gallery" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Gallery</ScrollLink>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="newDesignComponent" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Aviation</ScrollLink>
+                        </motion.div>
+                        <motion.div variants={linkVariants}>
+                            <ScrollLink to="booking" spy={true} smooth={true} duration={500} className="hover:text-gray-300 cursor-pointer" onClick={toggleMenu}>Book Now</ScrollLink>
+                        </motion.div>
                     </motion.nav>
                 </div>
             )}
