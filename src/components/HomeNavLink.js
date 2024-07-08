@@ -14,7 +14,7 @@ import Gallery from './Gallery';
 import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
-import ComingSoonComponent from './ComingSoonComponent';
+// import ComingSoonComponent from './ComingSoonComponent';
 import SocialComponent from './SocialComponent';
 
 const iconMap = {

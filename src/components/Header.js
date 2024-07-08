@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -60,7 +60,7 @@ const Header = () => {
                 <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
             </div>
             <div className="hidden md:flex items-center flex-grow justify-end">
-                <button className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={() => scroll.scrollTo('booking')}>
+                <button className="bg-[#000D28] text-center text-white px-4 py-2 rounded hover:bg-gray-900 flex items-center justify-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     Book
                 </button>
             </div>
