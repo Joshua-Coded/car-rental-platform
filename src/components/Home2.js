@@ -15,6 +15,7 @@ import Footer from './Footer';
 import Booking from './Booking';
 import NewService from './NewService';
 import Homenavlink from '../components/HomeNavLink';
+import ComingSoonComponent from './ComingSoonComponent ';
 
 const Home2 = ({ userType }) => {
     const staggerContainer = {
@@ -60,6 +61,14 @@ const Home2 = ({ userType }) => {
                     <NewDesignComponent />
                 </motion.div>
             </Element>
+
+            <Element name="ComingSoonComponent">
+                <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+                    <ComingSoonComponent />
+                </motion.div>
+            </Element>
+
+
             <Element name="gallery">
                 <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
                     <Gallery />

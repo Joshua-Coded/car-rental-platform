@@ -56,7 +56,7 @@ const Header = () => {
     };
 
     const handleNavigation = (section) => {
-        const sections = ['hero', 'newService', 'whatYouCanExpect', 'gallery', 'newDesignComponent', 'booking'];
+        const sections = ['hero', 'newService', 'whatYouCanExpect', 'gallery', 'newDesignComponent', 'booking', 'ComingSoonComponent'];
         if (sections.includes(section) && location.pathname !== '/') {
             navigate('/');
             setTimeout(() => {
@@ -83,13 +83,17 @@ const Header = () => {
             </div>
             <div className="hidden md:flex items-center space-x-6 flex-grow">
                 <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
+                <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
                 <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
-                    Business
-                </RouterLink>
                 <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
                     Weddings
                 </RouterLink>
+                <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
+                    Business
+                </RouterLink>
+                <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
+                <button onClick={() => handleNavigation('newDesignComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
+                <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book</button>
             </div>
             <div className="flex-shrink-0 mx-4">
                 <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
@@ -123,12 +127,13 @@ const Header = () => {
                             <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
                         </div>
                         <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
+                        <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
                         <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                        <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
-                            Business
-                        </RouterLink>
                         <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
                             Weddings
+                        </RouterLink>
+                        <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
+                            Business
                         </RouterLink>
                         <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
                         <button onClick={() => handleNavigation('ComingSoonComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
