@@ -82,7 +82,8 @@ const Header = () => {
                 </button>
             </div>
             <div className="hidden md:flex items-center space-x-6 flex-grow">
-                <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Services</button>
+                <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
+                <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
                 <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
                     Business
                 </RouterLink>
@@ -121,13 +122,17 @@ const Header = () => {
                         <div className="mb-4">
                             <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
                         </div>
-                        <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
+                        <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
+                        <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
                         <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
                             Business
                         </RouterLink>
                         <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
                             Weddings
                         </RouterLink>
+                        <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
+                        <button onClick={() => handleNavigation('ComingSoonComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
+                        <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book Now</button>
                     </motion.nav>
                 </div>
             )}
