@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,7 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
+    const menuRef = useRef(null);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -32,6 +33,20 @@ const Header = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     const scrollToSection = (section) => {
         scroller.scrollTo(section, {
             duration: 800,
@@ -44,9 +59,13 @@ const Header = () => {
         const sections = ['hero', 'newService', 'whatYouCanExpect', 'gallery', 'newDesignComponent', 'booking'];
         if (sections.includes(section) && location.pathname !== '/') {
             navigate('/');
-            setTimeout(() => scrollToSection(section), 100); // Delay to allow route change
+            setTimeout(() => {
+                scrollToSection(section);
+                setIsOpen(false); // Close the menu after scrolling
+            }, 100); // Delay to allow route change
         } else {
             scrollToSection(section);
+            setIsOpen(false); // Close the menu after scrolling
         }
     };
 
@@ -63,18 +82,13 @@ const Header = () => {
                 </button>
             </div>
             <div className="hidden md:flex items-center space-x-6 flex-grow">
-                <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
-                <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
-                <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
-                    Weddings
-                </RouterLink>
+                <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Services</button>
                 <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
                     Business
                 </RouterLink>
-                <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
-                <button onClick={() => handleNavigation('newDesignComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
-                <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book</button>
+                <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
+                    Weddings
+                </RouterLink>
             </div>
             <div className="flex-shrink-0 mx-4">
                 <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
@@ -85,7 +99,7 @@ const Header = () => {
                 </button>
             </div>
             {isOpen && (
-                <div className="fixed inset-0 bg-[#470A1C] text-white flex flex-col items-center justify-center z-50">
+                <div className="fixed inset-0 bg-[#470A1C] text-white flex flex-col items-center justify-center z-50" ref={menuRef}>
                     <button
                         className="absolute top-4 right-4 focus:outline-none cursor-pointer"
                         onClick={toggleMenu}
@@ -107,18 +121,13 @@ const Header = () => {
                         <div className="mb-4">
                             <img src={logo} alt="Company Logo" className="h-12 mx-auto" />
                         </div>
-                        <button onClick={() => handleNavigation('hero')} className="hover:text-gray-300 cursor-pointer">Home</button>
                         <button onClick={() => handleNavigation('newService')} className="hover:text-gray-300 cursor-pointer">Our Services</button>
-                        <button onClick={() => handleNavigation('whatYouCanExpect')} className="hover:text-gray-300 cursor-pointer">Features</button>
-                        <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
-                            Weddings
-                        </RouterLink>
                         <RouterLink to="/business" className="hover:text-gray-300 cursor-pointer">
                             Business
                         </RouterLink>
-                        <button onClick={() => handleNavigation('gallery')} className="hover:text-gray-300 cursor-pointer">Gallery</button>
-                        <button onClick={() => handleNavigation('newDesignComponent')} className="hover:text-gray-300 cursor-pointer">Aviation</button>
-                        <button onClick={() => handleNavigation('booking')} className="hover:text-gray-300 cursor-pointer">Book Now</button>
+                        <RouterLink to="/weddings" className="hover:text-gray-300 cursor-pointer">
+                            Weddings
+                        </RouterLink>
                     </motion.nav>
                 </div>
             )}
